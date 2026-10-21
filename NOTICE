@@ -1,0 +1,10 @@
+Shopify Snippets by commente.me
+Copyright (c) 2026 José Luiz Rodrigues (commente.me). Licencia MIT (ver LICENSE).
+
+Este proyecto incluye datos y esquemas de terceros:
+
+data/filters.json, data/tags.json, data/objects.json y schemas/
+  Origen: Shopify/theme-liquid-docs (https://github.com/Shopify/theme-liquid-docs),
+  en el commit indicado en data/fonte.json.
+  Copyright (c) Shopify Inc. Licencia MIT.
+  Los snippets de snippets/liquid.code-snippets se generan a partir de esos datos.
