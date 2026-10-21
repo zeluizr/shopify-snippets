@@ -1,0 +1,117 @@
+{
+	"name": "shopify-snippets",
+	"displayName": "Shopify Snippets by commente.me",
+	"description": "Snippets de Liquid y validación del {% schema %} para temas de Shopify, generados desde la documentación oficial.",
+	"version": "0.1.1",
+	"publisher": "commenteme",
+	"icon": "images/icon.png",
+	"galleryBanner": {
+		"color": "#0A5C44",
+		"theme": "dark"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/zeluizr/shopify-snippets.git"
+	},
+	"homepage": "https://github.com/zeluizr/shopify-snippets#readme",
+	"bugs": {
+		"url": "https://github.com/zeluizr/shopify-snippets/issues"
+	},
+	"engines": {
+		"vscode": "^1.60.0"
+	},
+	"categories": [
+		"Snippets",
+		"Linters",
+		"Programming Languages"
+	],
+	"keywords": [
+		"shopify",
+		"liquid",
+		"theme",
+		"horizon",
+		"online store 2.0",
+		"snippets",
+		"schema",
+		"sections",
+		"blocks"
+	],
+	"main": "./extension.js",
+	"activationEvents": [
+		"onLanguage:liquid"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "liquid",
+				"aliases": [
+					"Liquid",
+					"liquid"
+				],
+				"extensions": [
+					".liquid"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"snippets": [
+			{
+				"language": "liquid",
+				"path": "./snippets/liquid.code-snippets"
+			},
+			{
+				"language": "liquid",
+				"path": "./snippets/shopify.code-snippets"
+			},
+			{
+				"language": "liquid",
+				"path": "./snippets/settings.code-snippets"
+			},
+			{
+				"language": "json",
+				"path": "./snippets/settings.code-snippets"
+			},
+			{
+				"language": "jsonc",
+				"path": "./snippets/settings.code-snippets"
+			}
+		],
+		"jsonValidation": [
+			{
+				"fileMatch": "**/config/settings_schema.json",
+				"url": "./schemas/theme/theme_settings.json"
+			},
+			{
+				"fileMatch": "**/locales/*.json",
+				"url": "./schemas/theme/translations.json"
+			}
+		],
+		"configuration": {
+			"title": "Shopify Snippets",
+			"properties": {
+				"shopifySnippets.validarSchema": {
+					"type": "boolean",
+					"default": true,
+					"description": "Valida el {% schema %} de sections/*.liquid y blocks/*.liquid contra el esquema oficial de Shopify."
+				}
+			}
+		}
+	},
+	"scripts": {
+		"test": "node --test",
+		"gerar": "node scripts/gerar.js",
+		"check": "node scripts/gerar.js && git diff --exit-code -- snippets/ && node --test",
+		"sincronizar": "node scripts/sincronizar.js",
+		"empacotar": "npx --yes @vscode/vsce package",
+		"icone": "node scripts/gerar-icone.js",
+		"preview": "node scripts/gerar-preview.js"
+	},
+	"dependencies": {
+		"ajv": "^8.20.0",
+		"jsonc-parser": "^3.3.1"
+	},
+	"devDependencies": {
+		"sharp": "^0.35.5"
+	}
+}

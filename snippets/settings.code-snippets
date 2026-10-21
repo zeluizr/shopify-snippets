@@ -1,0 +1,465 @@
+{
+	"setting text": {
+		"prefix": "setting-text",
+		"body": [
+			"{",
+			"\t\"type\": \"text\",",
+			"\t\"id\": \"${1:titulo}\",",
+			"\t\"label\": \"${2:Título}\",",
+			"\t\"default\": \"${3:}\"",
+			"}"
+		],
+		"description": "Campo de texto de una línea.\nhttps://shopify.dev/docs/storefronts/themes/architecture/settings/input-settings#text"
+	},
+	"setting textarea": {
+		"prefix": "setting-textarea",
+		"body": [
+			"{",
+			"\t\"type\": \"textarea\",",
+			"\t\"id\": \"${1:texto}\",",
+			"\t\"label\": \"${2:Texto}\",",
+			"\t\"default\": \"${3:}\"",
+			"}"
+		],
+		"description": "Campo de texto de varias líneas.\nhttps://shopify.dev/docs/storefronts/themes/architecture/settings/input-settings#textarea"
+	},
+	"setting richtext": {
+		"prefix": "setting-richtext",
+		"body": [
+			"{",
+			"\t\"type\": \"richtext\",",
+			"\t\"id\": \"${1:contenido}\",",
+			"\t\"label\": \"${2:Contenido}\",",
+			"\t\"default\": \"${3:<p></p>}\"",
+			"}"
+		],
+		"description": "Editor de texto enriquecido con párrafos.\nhttps://shopify.dev/docs/storefronts/themes/architecture/settings/input-settings#richtext"
+	},
+	"setting inline_richtext": {
+		"prefix": "setting-inline_richtext",
+		"body": [
+			"{",
+			"\t\"type\": \"inline_richtext\",",
+			"\t\"id\": \"${1:titular}\",",
+			"\t\"label\": \"${2:Titular}\",",
+			"\t\"default\": \"${3:}\"",
+			"}"
+		],
+		"description": "Texto enriquecido de una línea (negrita, cursiva, enlace).\nhttps://shopify.dev/docs/storefronts/themes/architecture/settings/input-settings#inline_richtext"
+	},
+	"setting html": {
+		"prefix": "setting-html",
+		"body": [
+			"{",
+			"\t\"type\": \"html\",",
+			"\t\"id\": \"${1:html}\",",
+			"\t\"label\": \"${2:HTML}\",",
+			"\t\"default\": \"${3:}\"",
+			"}"
+		],
+		"description": "Campo de HTML.\nhttps://shopify.dev/docs/storefronts/themes/architecture/settings/input-settings#html"
+	},
+	"setting liquid": {
+		"prefix": "setting-liquid",
+		"body": [
+			"{",
+			"\t\"type\": \"liquid\",",
+			"\t\"id\": \"${1:liquid}\",",
+			"\t\"label\": \"${2:Liquid}\",",
+			"\t\"default\": \"${3:}\"",
+			"}"
+		],
+		"description": "Campo de Liquid.\nhttps://shopify.dev/docs/storefronts/themes/architecture/settings/input-settings#liquid"
+	},
+	"setting number": {
+		"prefix": "setting-number",
+		"body": [
+			"{",
+			"\t\"type\": \"number\",",
+			"\t\"id\": \"${1:cantidad}\",",
+			"\t\"label\": \"${2:Cantidad}\",",
+			"\t\"default\": ${3:4}",
+			"}"
+		],
+		"description": "Campo numérico.\nhttps://shopify.dev/docs/storefronts/themes/architecture/settings/input-settings#number"
+	},
+	"setting range": {
+		"prefix": "setting-range",
+		"body": [
+			"{",
+			"\t\"type\": \"range\",",
+			"\t\"id\": \"${1:columnas}\",",
+			"\t\"label\": \"${2:Columnas}\",",
+			"\t\"min\": ${3:1},",
+			"\t\"max\": ${4:6},",
+			"\t\"step\": ${5:1},",
+			"\t\"default\": ${6:4}",
+			"}"
+		],
+		"description": "Control deslizante con mínimo, máximo y paso.\nhttps://shopify.dev/docs/storefronts/themes/architecture/settings/input-settings#range"
+	},
+	"setting checkbox": {
+		"prefix": "setting-checkbox",
+		"body": [
+			"{",
+			"\t\"type\": \"checkbox\",",
+			"\t\"id\": \"${1:mostrar}\",",
+			"\t\"label\": \"${2:Mostrar}\",",
+			"\t\"default\": ${3:true}",
+			"}"
+		],
+		"description": "Casilla de verificación.\nhttps://shopify.dev/docs/storefronts/themes/architecture/settings/input-settings#checkbox"
+	},
+	"setting select": {
+		"prefix": "setting-select",
+		"body": [
+			"{",
+			"\t\"type\": \"select\",",
+			"\t\"id\": \"${1:alineacion}\",",
+			"\t\"label\": \"${2:Alineación}\",",
+			"\t\"options\": [",
+			"\t\t{",
+			"\t\t\t\"value\": \"izquierda\",",
+			"\t\t\t\"label\": \"Izquierda\"",
+			"\t\t},",
+			"\t\t{",
+			"\t\t\t\"value\": \"centro\",",
+			"\t\t\t\"label\": \"Centro\"",
+			"\t\t}",
+			"\t],",
+			"\t\"default\": \"${3:izquierda}\"",
+			"}"
+		],
+		"description": "Lista desplegable de opciones.\nhttps://shopify.dev/docs/storefronts/themes/architecture/settings/input-settings#select"
+	},
+	"setting radio": {
+		"prefix": "setting-radio",
+		"body": [
+			"{",
+			"\t\"type\": \"radio\",",
+			"\t\"id\": \"${1:tamano}\",",
+			"\t\"label\": \"${2:Tamaño}\",",
+			"\t\"options\": [",
+			"\t\t{",
+			"\t\t\t\"value\": \"chico\",",
+			"\t\t\t\"label\": \"Chico\"",
+			"\t\t},",
+			"\t\t{",
+			"\t\t\t\"value\": \"grande\",",
+			"\t\t\t\"label\": \"Grande\"",
+			"\t\t}",
+			"\t],",
+			"\t\"default\": \"${3:chico}\"",
+			"}"
+		],
+		"description": "Botones de opción.\nhttps://shopify.dev/docs/storefronts/themes/architecture/settings/input-settings#radio"
+	},
+	"setting text_alignment": {
+		"prefix": "setting-text_alignment",
+		"body": [
+			"{",
+			"\t\"type\": \"text_alignment\",",
+			"\t\"id\": \"${1:alineacion_texto}\",",
+			"\t\"label\": \"${2:Alineación del texto}\",",
+			"\t\"default\": \"${3:left}\"",
+			"}"
+		],
+		"description": "Selector de alineación de texto.\nhttps://shopify.dev/docs/storefronts/themes/architecture/settings/input-settings#text_alignment"
+	},
+	"setting color": {
+		"prefix": "setting-color",
+		"body": [
+			"{",
+			"\t\"type\": \"color\",",
+			"\t\"id\": \"${1:color}\",",
+			"\t\"label\": \"${2:Color}\",",
+			"\t\"default\": \"${3:#000000}\"",
+			"}"
+		],
+		"description": "Selector de color.\nhttps://shopify.dev/docs/storefronts/themes/architecture/settings/input-settings#color"
+	},
+	"setting color_background": {
+		"prefix": "setting-color_background",
+		"body": [
+			"{",
+			"\t\"type\": \"color_background\",",
+			"\t\"id\": \"${1:fondo}\",",
+			"\t\"label\": \"${2:Fondo}\"",
+			"}"
+		],
+		"description": "Fondo con color o degradado (CSS background).\nhttps://shopify.dev/docs/storefronts/themes/architecture/settings/input-settings#color_background"
+	},
+	"setting color_scheme": {
+		"prefix": "setting-color_scheme",
+		"body": [
+			"{",
+			"\t\"type\": \"color_scheme\",",
+			"\t\"id\": \"${1:esquema}\",",
+			"\t\"label\": \"${2:Esquema de colores}\",",
+			"\t\"default\": \"${3:scheme-1}\"",
+			"}"
+		],
+		"description": "Selector de esquema de colores del tema.\nhttps://shopify.dev/docs/storefronts/themes/architecture/settings/input-settings#color_scheme"
+	},
+	"setting color_scheme_group": {
+		"prefix": "setting-color_scheme_group",
+		"body": [
+			"{",
+			"\t\"type\": \"color_scheme_group\",",
+			"\t\"id\": \"${1:esquemas}\",",
+			"\t\"definition\": [",
+			"\t\t{",
+			"\t\t\t\"type\": \"color\",",
+			"\t\t\t\"id\": \"fondo\",",
+			"\t\t\t\"label\": \"Fondo\",",
+			"\t\t\t\"default\": \"#FFFFFF\"",
+			"\t\t},",
+			"\t\t{",
+			"\t\t\t\"type\": \"color\",",
+			"\t\t\t\"id\": \"texto\",",
+			"\t\t\t\"label\": \"Texto\",",
+			"\t\t\t\"default\": \"#121212\"",
+			"\t\t}",
+			"\t],",
+			"\t\"role\": {",
+			"\t\t\"text\": \"texto\",",
+			"\t\t\"background\": {",
+			"\t\t\t\"solid\": \"fondo\",",
+			"\t\t\t\"gradient\": \"fondo\"",
+			"\t\t},",
+			"\t\t\"links\": \"texto\",",
+			"\t\t\"icons\": \"texto\",",
+			"\t\t\"primary_button\": \"texto\",",
+			"\t\t\"on_primary_button\": \"fondo\",",
+			"\t\t\"primary_button_border\": \"texto\",",
+			"\t\t\"secondary_button\": \"fondo\",",
+			"\t\t\"on_secondary_button\": \"texto\",",
+			"\t\t\"secondary_button_border\": \"texto\"",
+			"\t}",
+			"}"
+		],
+		"description": "Grupo de esquemas de colores (solo en config/settings_schema.json).\nhttps://shopify.dev/docs/storefronts/themes/architecture/settings/input-settings#color_scheme_group"
+	},
+	"setting color_palette": {
+		"prefix": "setting-color_palette",
+		"body": [
+			"{",
+			"\t\"type\": \"color_palette\",",
+			"\t\"id\": \"${1:paleta}\",",
+			"\t\"default\": {",
+			"\t\t\"fondo\": \"#FFFFFF\",",
+			"\t\t\"texto\": \"#000000\"",
+			"\t}",
+			"}"
+		],
+		"description": "Paleta de colores con nombre.\nhttps://shopify.dev/docs/storefronts/themes/architecture/settings/input-settings#color_palette"
+	},
+	"setting font_picker": {
+		"prefix": "setting-font_picker",
+		"body": [
+			"{",
+			"\t\"type\": \"font_picker\",",
+			"\t\"id\": \"${1:fuente}\",",
+			"\t\"label\": \"${2:Fuente}\",",
+			"\t\"default\": \"${3:assistant_n4}\"",
+			"}"
+		],
+		"description": "Selector de fuente de la biblioteca de Shopify.\nhttps://shopify.dev/docs/storefronts/themes/architecture/settings/input-settings#font_picker"
+	},
+	"setting image_picker": {
+		"prefix": "setting-image_picker",
+		"body": [
+			"{",
+			"\t\"type\": \"image_picker\",",
+			"\t\"id\": \"${1:imagen}\",",
+			"\t\"label\": \"${2:Imagen}\"",
+			"}"
+		],
+		"description": "Selector de imagen.\nhttps://shopify.dev/docs/storefronts/themes/architecture/settings/input-settings#image_picker"
+	},
+	"setting video": {
+		"prefix": "setting-video",
+		"body": [
+			"{",
+			"\t\"type\": \"video\",",
+			"\t\"id\": \"${1:video}\",",
+			"\t\"label\": \"${2:Video}\"",
+			"}"
+		],
+		"description": "Selector de video subido a Shopify.\nhttps://shopify.dev/docs/storefronts/themes/architecture/settings/input-settings#video"
+	},
+	"setting video_url": {
+		"prefix": "setting-video_url",
+		"body": [
+			"{",
+			"\t\"type\": \"video_url\",",
+			"\t\"id\": \"${1:video_url}\",",
+			"\t\"label\": \"${2:URL del video}\",",
+			"\t\"accept\": [",
+			"\t\t\"youtube\",",
+			"\t\t\"vimeo\"",
+			"\t]",
+			"}"
+		],
+		"description": "URL de YouTube o Vimeo.\nhttps://shopify.dev/docs/storefronts/themes/architecture/settings/input-settings#video_url"
+	},
+	"setting url": {
+		"prefix": "setting-url",
+		"body": [
+			"{",
+			"\t\"type\": \"url\",",
+			"\t\"id\": \"${1:enlace}\",",
+			"\t\"label\": \"${2:Enlace}\"",
+			"}"
+		],
+		"description": "Enlace a una página de la tienda o externa.\nhttps://shopify.dev/docs/storefronts/themes/architecture/settings/input-settings#url"
+	},
+	"setting link_list": {
+		"prefix": "setting-link_list",
+		"body": [
+			"{",
+			"\t\"type\": \"link_list\",",
+			"\t\"id\": \"${1:menu}\",",
+			"\t\"label\": \"${2:Menú}\",",
+			"\t\"default\": \"${3:main-menu}\"",
+			"}"
+		],
+		"description": "Selector de menú.\nhttps://shopify.dev/docs/storefronts/themes/architecture/settings/input-settings#link_list"
+	},
+	"setting product": {
+		"prefix": "setting-product",
+		"body": [
+			"{",
+			"\t\"type\": \"product\",",
+			"\t\"id\": \"${1:producto}\",",
+			"\t\"label\": \"${2:Producto}\"",
+			"}"
+		],
+		"description": "Selector de producto.\nhttps://shopify.dev/docs/storefronts/themes/architecture/settings/input-settings#product"
+	},
+	"setting product_list": {
+		"prefix": "setting-product_list",
+		"body": [
+			"{",
+			"\t\"type\": \"product_list\",",
+			"\t\"id\": \"${1:productos}\",",
+			"\t\"label\": \"${2:Productos}\",",
+			"\t\"limit\": ${3:12}",
+			"}"
+		],
+		"description": "Selector de varios productos.\nhttps://shopify.dev/docs/storefronts/themes/architecture/settings/input-settings#product_list"
+	},
+	"setting collection": {
+		"prefix": "setting-collection",
+		"body": [
+			"{",
+			"\t\"type\": \"collection\",",
+			"\t\"id\": \"${1:coleccion}\",",
+			"\t\"label\": \"${2:Colección}\"",
+			"}"
+		],
+		"description": "Selector de colección.\nhttps://shopify.dev/docs/storefronts/themes/architecture/settings/input-settings#collection"
+	},
+	"setting collection_list": {
+		"prefix": "setting-collection_list",
+		"body": [
+			"{",
+			"\t\"type\": \"collection_list\",",
+			"\t\"id\": \"${1:colecciones}\",",
+			"\t\"label\": \"${2:Colecciones}\",",
+			"\t\"limit\": ${3:8}",
+			"}"
+		],
+		"description": "Selector de varias colecciones.\nhttps://shopify.dev/docs/storefronts/themes/architecture/settings/input-settings#collection_list"
+	},
+	"setting page": {
+		"prefix": "setting-page",
+		"body": [
+			"{",
+			"\t\"type\": \"page\",",
+			"\t\"id\": \"${1:pagina}\",",
+			"\t\"label\": \"${2:Página}\"",
+			"}"
+		],
+		"description": "Selector de página.\nhttps://shopify.dev/docs/storefronts/themes/architecture/settings/input-settings#page"
+	},
+	"setting blog": {
+		"prefix": "setting-blog",
+		"body": [
+			"{",
+			"\t\"type\": \"blog\",",
+			"\t\"id\": \"${1:blog}\",",
+			"\t\"label\": \"${2:Blog}\"",
+			"}"
+		],
+		"description": "Selector de blog.\nhttps://shopify.dev/docs/storefronts/themes/architecture/settings/input-settings#blog"
+	},
+	"setting article": {
+		"prefix": "setting-article",
+		"body": [
+			"{",
+			"\t\"type\": \"article\",",
+			"\t\"id\": \"${1:articulo}\",",
+			"\t\"label\": \"${2:Artículo}\"",
+			"}"
+		],
+		"description": "Selector de artículo de blog.\nhttps://shopify.dev/docs/storefronts/themes/architecture/settings/input-settings#article"
+	},
+	"setting article_list": {
+		"prefix": "setting-article_list",
+		"body": [
+			"{",
+			"\t\"type\": \"article_list\",",
+			"\t\"id\": \"${1:articulos}\",",
+			"\t\"label\": \"${2:Artículos}\",",
+			"\t\"limit\": ${3:6}",
+			"}"
+		],
+		"description": "Selector de varios artículos de blog.\nhttps://shopify.dev/docs/storefronts/themes/architecture/settings/input-settings#article_list"
+	},
+	"setting metaobject": {
+		"prefix": "setting-metaobject",
+		"body": [
+			"{",
+			"\t\"type\": \"metaobject\",",
+			"\t\"id\": \"${1:metaobjeto}\",",
+			"\t\"label\": \"${2:Metaobjeto}\",",
+			"\t\"metaobject_type\": \"${3:tipo}\"",
+			"}"
+		],
+		"description": "Selector de una entrada de metaobjeto.\nhttps://shopify.dev/docs/storefronts/themes/architecture/settings/input-settings#metaobject"
+	},
+	"setting metaobject_list": {
+		"prefix": "setting-metaobject_list",
+		"body": [
+			"{",
+			"\t\"type\": \"metaobject_list\",",
+			"\t\"id\": \"${1:metaobjetos}\",",
+			"\t\"label\": \"${2:Metaobjetos}\",",
+			"\t\"metaobject_type\": \"${3:tipo}\",",
+			"\t\"limit\": ${4:6}",
+			"}"
+		],
+		"description": "Selector de varias entradas de metaobjeto.\nhttps://shopify.dev/docs/storefronts/themes/architecture/settings/input-settings#metaobject_list"
+	},
+	"setting header": {
+		"prefix": "setting-header",
+		"body": [
+			"{",
+			"\t\"type\": \"header\",",
+			"\t\"content\": \"${1:Encabezado}\"",
+			"}"
+		],
+		"description": "Encabezado en la barra lateral del editor (no guarda valor).\nhttps://shopify.dev/docs/storefronts/themes/architecture/settings/sidebar-settings#header"
+	},
+	"setting paragraph": {
+		"prefix": "setting-paragraph",
+		"body": [
+			"{",
+			"\t\"type\": \"paragraph\",",
+			"\t\"content\": \"${1:Texto de ayuda.}\"",
+			"}"
+		],
+		"description": "Párrafo en la barra lateral del editor (no guarda valor).\nhttps://shopify.dev/docs/storefronts/themes/architecture/settings/sidebar-settings#paragraph"
+	}
+}
