@@ -16,3 +16,4 @@ las versiones siguen [SemVer](https://semver.org/lang/es/).
 - Validación del `{% schema %}` de `sections/*.liquid` y `blocks/*.liquid` contra el esquema oficial, con los errores
   en español y en el lugar exacto. Se apaga con `shopifySnippets.validarSchema`.
 - Validación de `config/settings_schema.json` y `locales/*.json` con los esquemas oficiales.
+- Ícono de la extensión (el delimitador de Liquid sobre verde) y color del banner del Marketplace.
