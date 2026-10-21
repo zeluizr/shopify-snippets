@@ -1,4 +1,4 @@
-# Shopify Snippets by commente.me
+# Shopify Snippets
 
 **Snippets de Liquid y validación del `{% schema %}` para temas de Shopify, generados desde la documentación oficial.**
 
@@ -10,7 +10,7 @@ del editor de temas, y la validación del `{% schema %}` contra el esquema ofici
 
 ![Snippets de settings y validación del {% schema %} en una section de Horizon](images/preview.png)
 
-Versión del código: **0.1.1**, según [package.json](package.json). Requiere **VS Code >= 1.60.0**.
+Versión del código: **0.1.2**, según [package.json](package.json). Requiere **VS Code >= 1.60.0**.
 
 ---
 
@@ -28,7 +28,7 @@ Todo lo que sugiere sale de los datos oficiales de Shopify
 
 ## Instalación
 
-Desde el VS Code Marketplace: busca **«Shopify Snippets by commente.me»**, o desde Quick Open (`Cmd/Ctrl + P`):
+Desde el VS Code Marketplace: busca **«Shopify Snippets»**, o desde Quick Open (`Cmd/Ctrl + P`):
 
 ```
 ext install commenteme.shopify-snippets
@@ -118,4 +118,4 @@ MIT, ver [LICENSE](LICENSE). Los datos y esquemas de `data/` y `schemas/` son de
 
 ---
 
-Hecho por [commente.me](https://commente.me).
+_Hecho con amor y café por [commente.me](https://commente.me)_

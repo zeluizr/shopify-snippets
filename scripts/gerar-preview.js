@@ -57,7 +57,8 @@ const COR = {
 	num: "#B5CEA8",
 	pont: "#CCCCCC",
 	filtro: "#DCDCAA",
-	verde: "#13906A"
+	// arquivos .liquid: azul-claro da marca (nada de cor de plataforma)
+	liquid: "#7FBBD8"
 };
 
 // --- geometria ----------------------------------------------------------------
@@ -196,7 +197,7 @@ function lateral() {
 		if (!pasta && marca) s += rect(ACT + 1, y - 15, SIDE - ACT - 1, 22, COR.selecaoArvore);
 		const x = ACT + 22 + nivel * 16;
 		if (pasta) s += ui(x, y, marca ? "⌄" : "›", COR.textoFraco, 12);
-		const corIcone = pasta ? "#C09553" : nome.endsWith(".json") ? "#CBCB41" : COR.verde;
+		const corIcone = pasta ? "#C09553" : nome.endsWith(".json") ? "#CBCB41" : COR.liquid;
 		s += rect(x + 14, y - 10, 10, 10, corIcone, " rx=\"2\"");
 		s += ui(x + 30, y, nome, COR.texto, 12.5);
 	});
@@ -214,7 +215,7 @@ function abas() {
 			s += rect(x, 0, larg, TAB, COR.abaAtiva);
 			s += rect(x, 0, larg, 2, COR.abaRealce);
 		}
-		s += rect(x + 12, 13, 10, 10, String(nome).endsWith(".json") ? "#CBCB41" : COR.verde, " rx=\"2\"");
+		s += rect(x + 12, 13, 10, 10, String(nome).endsWith(".json") ? "#CBCB41" : COR.liquid, " rx=\"2\"");
 		s += ui(x + 28, 23, String(nome), ativa ? COR.texto : COR.textoFraco, 12.5);
 		s += rect(x + larg, 0, 1, TAB, COR.borda);
 		x += larg + 1;
@@ -276,7 +277,7 @@ function painel() {
 	s += ui(EDX + 142, PANEL_Y + 22, "SALIDA", COR.textoFraco, 11, " letter-spacing=\"0.5\"");
 	s += ui(EDX + 208, PANEL_Y + 22, "TERMINAL", COR.textoFraco, 11, " letter-spacing=\"0.5\"");
 	s += ui(EDX + 24, PANEL_Y + 52, "⌄", COR.textoFraco, 12);
-	s += rect(EDX + 40, PANEL_Y + 42, 10, 10, COR.verde, " rx=\"2\"");
+	s += rect(EDX + 40, PANEL_Y + 42, 10, 10, COR.liquid, " rx=\"2\"");
 	s += ui(EDX + 56, PANEL_Y + 52, "hero.liquid", COR.texto, 12.5);
 	s += ui(EDX + 136, PANEL_Y + 52, "sections", COR.textoFraco, 12);
 	s += `<circle cx="${EDX + 50}" cy="${PANEL_Y + 72}" r="6" fill="${COR.erro}"/>`;

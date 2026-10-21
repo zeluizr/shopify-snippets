@@ -5,6 +5,13 @@ las versiones siguen [SemVer](https://semver.org/lang/es/).
 
 ## [Sin publicar]
 
+## [0.1.2] - 2026-10-21
+
+### Cambiado
+
+- La extensión sigue la marca de commente.me: el ícono es el ladrillo, el banner del Marketplace va en azul y el
+  nombre visible pasa a «Shopify Snippets».
+
 ## [0.1.1] - 2026-10-21
 
 ### Cambiado
