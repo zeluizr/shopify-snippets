@@ -2,7 +2,7 @@
 	"name": "shopify-snippets",
 	"displayName": "Shopify Snippets by commente.me",
 	"description": "Snippets de Liquid y validación del {% schema %} para temas de Shopify, generados desde la documentación oficial.",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"publisher": "commenteme",
 	"icon": "images/icon.png",
 	"galleryBanner": {
