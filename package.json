@@ -2,8 +2,13 @@
 	"name": "shopify-snippets",
 	"displayName": "Shopify Snippets by commente.me",
 	"description": "Snippets de Liquid y validación del {% schema %} para temas de Shopify, generados desde la documentación oficial.",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"publisher": "commenteme",
+	"icon": "images/icon.png",
+	"galleryBanner": {
+		"color": "#0A5C44",
+		"theme": "dark"
+	},
 	"license": "MIT",
 	"repository": {
 		"type": "git",
@@ -98,10 +103,15 @@
 		"gerar": "node scripts/gerar.js",
 		"check": "node scripts/gerar.js && git diff --exit-code -- snippets/ && node --test",
 		"sincronizar": "node scripts/sincronizar.js",
-		"empacotar": "npx --yes @vscode/vsce package"
+		"empacotar": "npx --yes @vscode/vsce package",
+		"icone": "node scripts/gerar-icone.js",
+		"preview": "node scripts/gerar-preview.js"
 	},
 	"dependencies": {
 		"ajv": "^8.20.0",
 		"jsonc-parser": "^3.3.1"
+	},
+	"devDependencies": {
+		"sharp": "^0.35.5"
 	}
 }

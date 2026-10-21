@@ -8,7 +8,9 @@ del editor de temas, y la validación del `{% schema %}` contra el esquema ofici
 
 [![licencia](https://badgen.net/github/license/zeluizr/shopify-snippets?label=licencia)](./LICENSE)
 
-Versión del código: **0.1.0**, según [package.json](package.json). Requiere **VS Code >= 1.60.0**.
+![Snippets de settings y validación del {% schema %} en una section de Horizon](images/preview.png)
+
+Versión del código: **0.1.1**, según [package.json](package.json). Requiere **VS Code >= 1.60.0**.
 
 ---
 
@@ -26,10 +28,16 @@ Todo lo que sugiere sale de los datos oficiales de Shopify
 
 ## Instalación
 
-Mientras no esté en el Marketplace, desde el `.vsix` de la release:
+Desde el VS Code Marketplace: busca **«Shopify Snippets by commente.me»**, o desde Quick Open (`Cmd/Ctrl + P`):
+
+```
+ext install commenteme.shopify-snippets
+```
+
+Desde el terminal:
 
 ```bash
-code --install-extension shopify-snippets-0.1.0.vsix
+code --install-extension commenteme.shopify-snippets
 ```
 
 ## Uso
@@ -69,7 +77,8 @@ el enlace a shopify.dev.
 ### Validación
 
 - **`{% schema %}` de `sections/*.liquid` y `blocks/*.liquid`**: los errores aparecen subrayados en el lugar exacto,
-  en español (propiedad que falta, propiedad que sobra, tipo de setting inexistente, JSON mal formado).
+  en español (propiedad que falta, propiedad que sobra, tipo de setting inexistente, JSON mal formado). Cuando un
+  valor no está entre las opciones, sugiere la más cercana: `"colour"` → *¿Quisiste decir "color"?*
 - **`config/settings_schema.json` y `locales/*.json`**: con el validador de JSON del propio VS Code.
 
 Para apagar la validación del `{% schema %}`:

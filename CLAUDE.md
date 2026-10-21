@@ -41,6 +41,8 @@ npm install
 npm run check                          # gera, confere o diff de snippets/ e roda os testes (é o gate)
 node scripts/sincronizar.js <commit>   # atualiza data/ e schemas/ de Shopify/theme-liquid-docs
 npm run empacotar                      # gera o .vsix
+npm run icone                          # images/icon.png (sharp)
+npm run preview                        # images/preview.png, a partir dos snippets e do validador reais
 ```
 
 ## Branches e versão
