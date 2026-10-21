@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Guia para trabalhar neste repositório. É a extensão de VS Code **"Shopify Snippets by commente.me"** (publisher
+Guia para trabalhar neste repositório. É a extensão de VS Code **"Shopify Snippets"** (publisher
 `commenteme`, id `commenteme.shopify-snippets`). Irmã do `zeluizr/vtex-io-snippets`, para temas de Shopify.
 
 ## O que a extensão faz
@@ -34,6 +34,13 @@ Não traz gramática de Liquid: registra o lenguaje `liquid` e convive com a ext
   diagnóstico em espanhol.
 - Dependências de runtime só `ajv` e `jsonc-parser`. O `.vsix` vai com elas (sem `--no-dependencies`).
 
+## Marca
+
+Segue o kit de marca da commente.me (skill `marca-commente`): o ícone é o **ladrillo**
+(`images/ladrillo-commente.svg`, cópia do kit sem metadados), nenhum produto tem ícone ou cor própria, o banner do
+Marketplace é `--azul` (`#005278`), o nome não leva "by commente.me" e o README assina "Hecho con amor y café por
+commente.me", sem citar ferramenta de IA.
+
 ## Comandos
 
 ```bash
@@ -41,7 +48,7 @@ npm install
 npm run check                          # gera, confere o diff de snippets/ e roda os testes (é o gate)
 node scripts/sincronizar.js <commit>   # atualiza data/ e schemas/ de Shopify/theme-liquid-docs
 npm run empacotar                      # gera o .vsix
-npm run icone                          # images/icon.png (sharp)
+npm run icone                          # images/icon.png a partir do ladrillo (sharp)
 npm run preview                        # images/preview.png, a partir dos snippets e do validador reais
 ```
 
