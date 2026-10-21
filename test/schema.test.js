@@ -5,7 +5,7 @@ const test = require("node:test");
 const assert = require("node:assert/strict");
 const fs = require("fs");
 const path = require("path");
-const { validarLiquid, extrairSchema, esquemaDoArquivo } = require("../lib/schema");
+const { validarLiquid, extrairSchema, esquemaDoArquivo, mensagemDeEnum } = require("../lib/schema");
 const { MANUAIS } = require("../lib/manuais");
 const { resolver } = require("./auxiliares");
 
@@ -43,6 +43,14 @@ test("tipo de setting inexistente aponta o valor errado", () => {
 	const marcado = problemas.map((p) => texto.slice(p.inicio, p.fim));
 	assert.ok(marcado.includes("\"colour\""), JSON.stringify(problemas));
 	assert.ok(problemas.every((p) => p.severidade === "erro"));
+});
+
+test("enum com muitas opções sugere a mais próxima em vez de listar todas", () => {
+	const texto = section({ name: "A", settings: [{ type: "colour", id: "c", label: "C" }] });
+	const mensagens = validarLiquid("sections/a.liquid", texto).map((p) => p.mensagem);
+	assert.ok(mensagens.includes("Valor \"colour\" no permitido. ¿Quisiste decir \"color\"?"), JSON.stringify(mensagens));
+	assert.equal(mensagemDeEnum("xyzxyzxyz", ["a", "b", "c", "d", "e", "f", "g"]), "Valor \"xyzxyzxyz\" no permitido (hay 7 opciones válidas).");
+	assert.equal(mensagemDeEnum("z", ["a", "b"]), "Valor no permitido. Opciones: \"a\", \"b\".");
 });
 
 test("propriedade sobrando marca a chave sobrando", () => {
