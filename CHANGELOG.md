@@ -5,6 +5,19 @@ las versiones siguen [SemVer](https://semver.org/lang/es/).
 
 ## [Sin publicar]
 
+## [0.1.1] - 2026-10-21
+
+### Cambiado
+
+- Cuando un valor del `{% schema %}` no está entre las opciones permitidas y hay más de seis, el error sugiere la
+  más cercana (`"colour"` → *¿Quisiste decir "color"?*) en lugar de listar todas.
+
+### Agregado
+
+- Imagen del README con la extensión en uso, generada desde los snippets y el validador reales.
+
+## [0.1.0] - 2026-10-21
+
 ### Agregado
 
 - Snippets de las 32 tags y los 148 filtros de Liquid vigentes, generados desde
@@ -14,8 +27,6 @@ las versiones siguen [SemVer](https://semver.org/lang/es/).
   imagen responsiva, `block.shopify_attributes` y texto traducido.
 - Un snippet por cada uno de los 35 tipos de setting del editor de temas, en Liquid y en JSON.
 - Validación del `{% schema %}` de `sections/*.liquid` y `blocks/*.liquid` contra el esquema oficial, con los errores
-  en español y en el lugar exacto; ante un valor fuera de las opciones, sugiere la más cercana. Se apaga con
-  `shopifySnippets.validarSchema`.
+  en español y en el lugar exacto. Se apaga con `shopifySnippets.validarSchema`.
 - Validación de `config/settings_schema.json` y `locales/*.json` con los esquemas oficiales.
 - Ícono de la extensión (el delimitador de Liquid sobre verde) y color del banner del Marketplace.
-- Imagen del README con la extensión en uso, generada desde los snippets y el validador reales.
