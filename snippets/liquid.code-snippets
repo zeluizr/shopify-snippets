@@ -1,0 +1,1301 @@
+{
+	"tag assign": {
+		"prefix": "assign",
+		"body": [
+			"{% assign ${1:variable_name} = ${2:value} %}"
+		],
+		"description": "Creates a new variable.\nhttps://shopify.dev/docs/api/liquid/tags/assign"
+	},
+	"tag block": {
+		"prefix": "block",
+		"body": [
+			"{% block 'name', parameter: value %}",
+			"\tcontent",
+			"{% endblock %}"
+		],
+		"description": "Renders a reusable theme block directly from a Liquid template.\nhttps://shopify.dev/docs/api/liquid/tags/block"
+	},
+	"tag break": {
+		"prefix": "break",
+		"body": [
+			"{% break %}"
+		],
+		"description": "Stops the rest of a file from rendering.\nhttps://shopify.dev/docs/api/liquid/tags/break"
+	},
+	"tag capture": {
+		"prefix": "capture",
+		"body": [
+			"{% capture ${1:variable} %}",
+			"\t${2:value}",
+			"{% endcapture %}"
+		],
+		"description": "Creates a new variable with a string value.\nhttps://shopify.dev/docs/api/liquid/tags/capture"
+	},
+	"tag case": {
+		"prefix": "case",
+		"body": [
+			"{% case ${1:variable} %}",
+			"\t{% when ${2:first_value} %}",
+			"\t\t${3:first_expression}",
+			"\t{% when ${4:second_value} %}",
+			"\t\t${5:second_expression}",
+			"\t{% else %}",
+			"\t\t${6:third_expression}",
+			"{% endcase %}"
+		],
+		"description": "Renders a specific expression depending on the value of a specific variable.\nhttps://shopify.dev/docs/api/liquid/tags/case"
+	},
+	"tag comment": {
+		"prefix": "comment",
+		"body": [
+			"{% comment %}",
+			"\t${1:content}",
+			"{% endcomment %}"
+		],
+		"description": "Prevents an expression from being rendered or output.\nhttps://shopify.dev/docs/api/liquid/tags/comment"
+	},
+	"tag content_for (1)": {
+		"prefix": "content_for",
+		"body": [
+			"{% content_for 'blocks' %}"
+		],
+		"description": "Renderiza los bloques del tema que el comerciante agrega en el editor.\nhttps://shopify.dev/docs/api/liquid/tags/content_for"
+	},
+	"tag content_for (2)": {
+		"prefix": "content_for",
+		"body": [
+			"{% content_for 'block', type: '${1:tipo}', id: '${2:id}' %}"
+		],
+		"description": "Renderiza un bloque estático, fijo en el código.\nhttps://shopify.dev/docs/api/liquid/tags/content_for"
+	},
+	"tag continue": {
+		"prefix": "continue",
+		"body": [
+			"{% continue %}"
+		],
+		"description": "Causes a for loop to skip to the next iteration.\nhttps://shopify.dev/docs/api/liquid/tags/continue"
+	},
+	"tag cycle": {
+		"prefix": "cycle",
+		"body": [
+			"{% cycle string, string, ... %}"
+		],
+		"description": "Loops through a group of strings and outputs them one at a time for each iteration of a for loop.\nhttps://shopify.dev/docs/api/liquid/tags/cycle"
+	},
+	"tag decrement": {
+		"prefix": "decrement",
+		"body": [
+			"{% decrement ${1:variable_name} %}"
+		],
+		"description": "Creates a new variable, with a default value of -1, that's decreased by 1 with each subsequent call. > Caution: > Predefined Liquid objects can be overridden by variables with the same name. > To make sure that you can access all Liquid objects, make sure that your variable name doesn't match a predefined object's name.\nhttps://shopify.dev/docs/api/liquid/tags/decrement"
+	},
+	"tag doc": {
+		"prefix": "doc",
+		"body": [
+			"{% doc %}",
+			"\tRenders a message.",
+			"",
+			"\t@param {string} foo - A string value.",
+			"\t@param {string} [bar] - An optional string value.",
+			"",
+			"\t@example",
+			"\t{% render 'message', foo: 'Hello', bar: 'World' %}",
+			"{% enddoc %}"
+		],
+		"description": "Documents template elements with annotations.\nhttps://shopify.dev/docs/api/liquid/tags/doc"
+	},
+	"tag echo": {
+		"prefix": "echo",
+		"body": [
+			"{% liquid",
+			"\techo ${1:expression}",
+			"%}"
+		],
+		"description": "Outputs an expression.\nhttps://shopify.dev/docs/api/liquid/tags/echo"
+	},
+	"tag else": {
+		"prefix": "else",
+		"body": [
+			"{% for ${1:variable} in ${2:array} %}",
+			"\t${3:first_expression}",
+			"{% else %}",
+			"\t${4:second_expression}",
+			"{% endfor %}"
+		],
+		"description": "Allows you to specify a default expression to execute when a for loop has zero length.\nhttps://shopify.dev/docs/api/liquid/tags/else"
+	},
+	"tag for": {
+		"prefix": "for",
+		"body": [
+			"{% for ${1:variable} in ${2:array} %}",
+			"\t${3:expression}",
+			"{% endfor %}"
+		],
+		"description": "Renders an expression for every item in an array.\nhttps://shopify.dev/docs/api/liquid/tags/for"
+	},
+	"tag form": {
+		"prefix": "form",
+		"body": [
+			"{% form '${1:form_type}' %}",
+			"\t${2:content}",
+			"{% endform %}"
+		],
+		"description": "Generates an HTML <form> tag, including any required <input> tags to submit the form to a specific endpoint.\nhttps://shopify.dev/docs/api/liquid/tags/form"
+	},
+	"tag if": {
+		"prefix": "if",
+		"body": [
+			"{% if ${1:condition} %}",
+			"\t${2:expression}",
+			"{% endif %}"
+		],
+		"description": "Renders an expression if a specific condition is true.\nhttps://shopify.dev/docs/api/liquid/tags/if"
+	},
+	"tag increment": {
+		"prefix": "increment",
+		"body": [
+			"{% increment ${1:variable_name} %}"
+		],
+		"description": "Creates a new variable, with a default value of 0, that's increased by 1 with each subsequent call. > Caution: > Predefined Liquid objects can be overridden by variables with the same name. > To make sure that you can access all Liquid objects, make sure that your variable name doesn't match a predefined object's name.\nhttps://shopify.dev/docs/api/liquid/tags/increment"
+	},
+	"tag javascript": {
+		"prefix": "javascript",
+		"body": [
+			"{% javascript %}",
+			"\t${1:javascript_code}",
+			"{% endjavascript %}"
+		],
+		"description": "JavaScript code included in section, block and snippet files.\nhttps://shopify.dev/docs/api/liquid/tags/javascript"
+	},
+	"tag layout": {
+		"prefix": "layout",
+		"body": [
+			"{% layout ${1:name} %}"
+		],
+		"description": "Specify which layout to use.\nhttps://shopify.dev/docs/api/liquid/tags/layout"
+	},
+	"tag liquid": {
+		"prefix": "liquid",
+		"body": [
+			"{% liquid",
+			"\t${1:expression}",
+			"%}"
+		],
+		"description": "Allows you to have a block of Liquid without delimeters on each tag.\nhttps://shopify.dev/docs/api/liquid/tags/liquid"
+	},
+	"tag paginate": {
+		"prefix": "paginate",
+		"body": [
+			"{% paginate ${1:array} by ${2:page_size} %}",
+			"\t{% for ${3:item} in ${1:array} %}",
+			"\t\t${4:forloop_content}",
+			"\t{% endfor %}",
+			"{% endpaginate %}"
+		],
+		"description": "Splits an array's items across multiple pages.\nhttps://shopify.dev/docs/api/liquid/tags/paginate"
+	},
+	"tag partial": {
+		"prefix": "partial",
+		"body": [
+			"{% partial '${1:name}' %}",
+			"\t${2:content}",
+			"{% endpartial %}"
+		],
+		"description": "Marks a named, server-rendered region that JavaScript can refresh without a full page reload.\nhttps://shopify.dev/docs/api/liquid/tags/partial"
+	},
+	"tag raw": {
+		"prefix": "raw",
+		"body": [
+			"{% raw %}",
+			"\t${1:expression}",
+			"{% endraw %}"
+		],
+		"description": "Outputs any Liquid code as text instead of rendering it.\nhttps://shopify.dev/docs/api/liquid/tags/raw"
+	},
+	"tag render": {
+		"prefix": "render",
+		"body": [
+			"{% render '${1:filename}' %}"
+		],
+		"description": "Renders a snippet or app block.\nhttps://shopify.dev/docs/api/liquid/tags/render"
+	},
+	"tag section": {
+		"prefix": "section",
+		"body": [
+			"{% section '${1:name}' %}"
+		],
+		"description": "Renders a section.\nhttps://shopify.dev/docs/api/liquid/tags/section"
+	},
+	"tag sections": {
+		"prefix": "sections",
+		"body": [
+			"{% sections '${1:name}' %}"
+		],
+		"description": "Renders a section group.\nhttps://shopify.dev/docs/api/liquid/tags/sections"
+	},
+	"tag style": {
+		"prefix": "style",
+		"body": [
+			"{% style %}",
+			"\t${1:CSS_rules}",
+			"{% endstyle %}"
+		],
+		"description": "Generates an HTML <style> tag with an attribute of data-shopify.\nhttps://shopify.dev/docs/api/liquid/tags/style"
+	},
+	"tag stylesheet": {
+		"prefix": "stylesheet",
+		"body": [
+			"{% stylesheet %}",
+			"\t${1:css_styles}",
+			"{% endstylesheet %}"
+		],
+		"description": "CSS styles included in section, block, and snippet files.\nhttps://shopify.dev/docs/api/liquid/tags/stylesheet"
+	},
+	"tag tablerow": {
+		"prefix": "tablerow",
+		"body": [
+			"{% tablerow ${1:variable} in ${2:array} %}",
+			"\t${3:expression}",
+			"{% endtablerow %}"
+		],
+		"description": "Generates HTML table rows for every item in an array.\nhttps://shopify.dev/docs/api/liquid/tags/tablerow"
+	},
+	"tag unless": {
+		"prefix": "unless",
+		"body": [
+			"{% unless ${1:condition} %}",
+			"\t${2:expression}",
+			"{% endunless %}"
+		],
+		"description": "Renders an expression unless a specific condition is true.\nhttps://shopify.dev/docs/api/liquid/tags/unless"
+	},
+	"filtro abs": {
+		"prefix": "abs",
+		"body": [
+			"abs"
+		],
+		"description": "Returns the absolute value of a number.\nnumber | abs\nhttps://shopify.dev/docs/api/liquid/filters/abs"
+	},
+	"filtro append": {
+		"prefix": "append",
+		"body": [
+			"append: ${1:string}"
+		],
+		"description": "Adds a given string to the end of a string.\nstring | append: string\nhttps://shopify.dev/docs/api/liquid/filters/append"
+	},
+	"filtro applicable_disclosures": {
+		"prefix": "applicable_disclosures",
+		"body": [
+			"applicable_disclosures"
+		],
+		"description": "Filters a list of disclosures to the ones that apply to the buyer's jurisdiction.\narray | applicable_disclosures\nhttps://shopify.dev/docs/api/liquid/filters/applicable_disclosures"
+	},
+	"filtro asset_img_url": {
+		"prefix": "asset_img_url",
+		"body": [
+			"asset_img_url"
+		],
+		"description": "Returns the CDN URL for an image in the assets directory of a theme.\nstring | asset_img_url\nhttps://shopify.dev/docs/api/liquid/filters/asset_img_url"
+	},
+	"filtro asset_url": {
+		"prefix": "asset_url",
+		"body": [
+			"asset_url"
+		],
+		"description": "Returns the CDN URL for a file in the assets directory of a theme.\nstring | asset_url\nhttps://shopify.dev/docs/api/liquid/filters/asset_url"
+	},
+	"filtro at_least": {
+		"prefix": "at_least",
+		"body": [
+			"at_least"
+		],
+		"description": "Limits a number to a minimum value.\nnumber | at_least\nhttps://shopify.dev/docs/api/liquid/filters/at_least"
+	},
+	"filtro at_most": {
+		"prefix": "at_most",
+		"body": [
+			"at_most"
+		],
+		"description": "Limits a number to a maximum value.\nnumber | at_most\nhttps://shopify.dev/docs/api/liquid/filters/at_most"
+	},
+	"filtro avatar": {
+		"prefix": "avatar",
+		"body": [
+			"avatar"
+		],
+		"description": "Generates HTML to render a customer's avatar, if available.\ncustomer | avatar\nhttps://shopify.dev/docs/api/liquid/filters/avatar"
+	},
+	"filtro base64_decode": {
+		"prefix": "base64_decode",
+		"body": [
+			"base64_decode"
+		],
+		"description": "Decodes a string in Base64 format.\nstring | base64_decode\nhttps://shopify.dev/docs/api/liquid/filters/base64_decode"
+	},
+	"filtro base64_encode": {
+		"prefix": "base64_encode",
+		"body": [
+			"base64_encode"
+		],
+		"description": "Encodes a string to Base64 format.\nstring | base64_encode\nhttps://shopify.dev/docs/api/liquid/filters/base64_encode"
+	},
+	"filtro base64_url_safe_decode": {
+		"prefix": "base64_url_safe_decode",
+		"body": [
+			"base64_url_safe_decode"
+		],
+		"description": "Decodes a string in URL-safe Base64 format.\nstring | base64_url_safe_decode\nhttps://shopify.dev/docs/api/liquid/filters/base64_url_safe_decode"
+	},
+	"filtro base64_url_safe_encode": {
+		"prefix": "base64_url_safe_encode",
+		"body": [
+			"base64_url_safe_encode"
+		],
+		"description": "Encodes a string to URL-safe Base64 format.\nstring | base64_url_safe_encode\nhttps://shopify.dev/docs/api/liquid/filters/base64_url_safe_encode"
+	},
+	"filtro blake3": {
+		"prefix": "blake3",
+		"body": [
+			"blake3"
+		],
+		"description": "Converts a string into a Blake3 hash.\nstring | blake3\nhttps://shopify.dev/docs/api/liquid/filters/blake3"
+	},
+	"filtro brightness_difference": {
+		"prefix": "brightness_difference",
+		"body": [
+			"brightness_difference: ${1:string}"
+		],
+		"description": "Calculates the perceived brightness difference between two colors.\nstring | brightness_difference: string\nhttps://shopify.dev/docs/api/liquid/filters/brightness_difference"
+	},
+	"filtro camelize": {
+		"prefix": "camelize",
+		"body": [
+			"camelize"
+		],
+		"description": "Converts a string to CamelCase.\nstring | camelize\nhttps://shopify.dev/docs/api/liquid/filters/camelize"
+	},
+	"filtro capitalize": {
+		"prefix": "capitalize",
+		"body": [
+			"capitalize"
+		],
+		"description": "Capitalizes the first word in a string and downcases the remaining characters.\nstring | capitalize\nhttps://shopify.dev/docs/api/liquid/filters/capitalize"
+	},
+	"filtro ceil": {
+		"prefix": "ceil",
+		"body": [
+			"ceil"
+		],
+		"description": "Rounds a number up to the nearest integer.\nnumber | ceil\nhttps://shopify.dev/docs/api/liquid/filters/ceil"
+	},
+	"filtro color_brightness": {
+		"prefix": "color_brightness",
+		"body": [
+			"color_brightness"
+		],
+		"description": "Calculates the perceived brightness of a given color.\nstring | color_brightness\nhttps://shopify.dev/docs/api/liquid/filters/color_brightness"
+	},
+	"filtro color_contrast": {
+		"prefix": "color_contrast",
+		"body": [
+			"color_contrast: ${1:string}"
+		],
+		"description": "Calculates the contrast ratio between two colors and returns the ratio's numerator. The ratio's denominator, which isn't returned, is always 1. For example, with a contrast ratio of 3.5:1, this filter returns 3.5.\nstring | color_contrast: string\nhttps://shopify.dev/docs/api/liquid/filters/color_contrast"
+	},
+	"filtro color_darken": {
+		"prefix": "color_darken",
+		"body": [
+			"color_darken: ${1:number}"
+		],
+		"description": "Darkens a given color by a specific percentage. The percentage must be between 0 and 100.\nstring | color_darken: number\nhttps://shopify.dev/docs/api/liquid/filters/color_darken"
+	},
+	"filtro color_desaturate": {
+		"prefix": "color_desaturate",
+		"body": [
+			"color_desaturate: ${1:number}"
+		],
+		"description": "Desaturates a given color by a specific percentage. The percentage must be between 0 and 100.\nstring | color_desaturate: number\nhttps://shopify.dev/docs/api/liquid/filters/color_desaturate"
+	},
+	"filtro color_difference": {
+		"prefix": "color_difference",
+		"body": [
+			"color_difference: ${1:string}"
+		],
+		"description": "Calculates the color difference between two colors.\nstring | color_difference: string\nhttps://shopify.dev/docs/api/liquid/filters/color_difference"
+	},
+	"filtro color_extract": {
+		"prefix": "color_extract",
+		"body": [
+			"color_extract: ${1:string}"
+		],
+		"description": "Extracts a specific color component from a given color.\nstring | color_extract: string\nhttps://shopify.dev/docs/api/liquid/filters/color_extract"
+	},
+	"filtro color_lighten": {
+		"prefix": "color_lighten",
+		"body": [
+			"color_lighten: ${1:number}"
+		],
+		"description": "Lightens a given color by a specific percentage. The percentage must be between 0 and 100.\nstring | color_lighten: number\nhttps://shopify.dev/docs/api/liquid/filters/color_lighten"
+	},
+	"filtro color_mix": {
+		"prefix": "color_mix",
+		"body": [
+			"color_mix: ${1:string}, ${2:number}"
+		],
+		"description": "Blends two colors together by a specific percentage factor. The percentage must be between 0 and 100.\nstring | color_mix: string, number\nhttps://shopify.dev/docs/api/liquid/filters/color_mix"
+	},
+	"filtro color_modify": {
+		"prefix": "color_modify",
+		"body": [
+			"color_modify: ${1:string}, ${2:number}"
+		],
+		"description": "Modifies a specific color component of a given color by a specific amount.\nstring | color_modify: string, number\nhttps://shopify.dev/docs/api/liquid/filters/color_modify"
+	},
+	"filtro color_saturate": {
+		"prefix": "color_saturate",
+		"body": [
+			"color_saturate: ${1:number}"
+		],
+		"description": "Saturates a given color by a specific percentage. The percentage must be between 0 and 100.\nstring | color_saturate: number\nhttps://shopify.dev/docs/api/liquid/filters/color_saturate"
+	},
+	"filtro color_to_hex": {
+		"prefix": "color_to_hex",
+		"body": [
+			"color_to_hex"
+		],
+		"description": "Converts a CSS color string to hexadecimal format (hex6).\nstring | color_to_hex\nhttps://shopify.dev/docs/api/liquid/filters/color_to_hex"
+	},
+	"filtro color_to_hsl": {
+		"prefix": "color_to_hsl",
+		"body": [
+			"color_to_hsl"
+		],
+		"description": "Converts a CSS color string to HSL format.\nstring | color_to_hsl\nhttps://shopify.dev/docs/api/liquid/filters/color_to_hsl"
+	},
+	"filtro color_to_oklch": {
+		"prefix": "color_to_oklch",
+		"body": [
+			"color_to_oklch"
+		],
+		"description": "Converts a CSS color string to OKLCH format.\nstring | color_to_oklch\nhttps://shopify.dev/docs/api/liquid/filters/color_to_oklch"
+	},
+	"filtro color_to_rgb": {
+		"prefix": "color_to_rgb",
+		"body": [
+			"color_to_rgb"
+		],
+		"description": "Converts a CSS color string to RGB format.\nstring | color_to_rgb\nhttps://shopify.dev/docs/api/liquid/filters/color_to_rgb"
+	},
+	"filtro compact": {
+		"prefix": "compact",
+		"body": [
+			"compact"
+		],
+		"description": "Removes any nil items from an array.\narray | compact\nhttps://shopify.dev/docs/api/liquid/filters/compact"
+	},
+	"filtro concat": {
+		"prefix": "concat",
+		"body": [
+			"concat: ${1:array}"
+		],
+		"description": "Concatenates (combines) two arrays.\narray | concat: array\nhttps://shopify.dev/docs/api/liquid/filters/concat"
+	},
+	"filtro customer_login_link": {
+		"prefix": "customer_login_link",
+		"body": [
+			"customer_login_link"
+		],
+		"description": "Generates an HTML link to the customer login page.\nstring | customer_login_link\nhttps://shopify.dev/docs/api/liquid/filters/customer_login_link"
+	},
+	"filtro customer_logout_link": {
+		"prefix": "customer_logout_link",
+		"body": [
+			"customer_logout_link"
+		],
+		"description": "Generates an HTML link to log the customer out of their account and redirect to the homepage.\nstring | customer_logout_link\nhttps://shopify.dev/docs/api/liquid/filters/customer_logout_link"
+	},
+	"filtro customer_register_link": {
+		"prefix": "customer_register_link",
+		"body": [
+			"customer_register_link"
+		],
+		"description": "Generates an HTML link to the customer registration page.\nstring | customer_register_link\nhttps://shopify.dev/docs/api/liquid/filters/customer_register_link"
+	},
+	"filtro date": {
+		"prefix": "date",
+		"body": [
+			"date: ${1:string}"
+		],
+		"description": "Formats a date according to a specified format string.\ndate | date: string\nhttps://shopify.dev/docs/api/liquid/filters/date"
+	},
+	"filtro default": {
+		"prefix": "default",
+		"body": [
+			"default: ${1:variable}"
+		],
+		"description": "Sets a default value for any variable whose value is one of the following: - empty - false - nil\nvariable | default: variable\nhttps://shopify.dev/docs/api/liquid/filters/default"
+	},
+	"filtro default_errors": {
+		"prefix": "default_errors",
+		"body": [
+			"default_errors"
+		],
+		"description": "Generates default error messages for each possible value of form.errors.\nstring | default_errors\nhttps://shopify.dev/docs/api/liquid/filters/default_errors"
+	},
+	"filtro default_pagination": {
+		"prefix": "default_pagination",
+		"body": [
+			"default_pagination"
+		],
+		"description": "Generates HTML for a set of links for paginated results. Must be applied to the paginate object.\npaginate | default_pagination\nhttps://shopify.dev/docs/api/liquid/filters/default_pagination"
+	},
+	"filtro divided_by": {
+		"prefix": "divided_by",
+		"body": [
+			"divided_by: ${1:number}"
+		],
+		"description": "Divides a number by a given number. The divided_by filter produces a result of the same type as the divisor. This means if you divide by an integer, the result will be an integer, and if you divide by a float, the result will be a float.\nnumber | divided_by: number\nhttps://shopify.dev/docs/api/liquid/filters/divided_by"
+	},
+	"filtro downcase": {
+		"prefix": "downcase",
+		"body": [
+			"downcase"
+		],
+		"description": "Converts a string to all lowercase characters.\nstring | downcase\nhttps://shopify.dev/docs/api/liquid/filters/downcase"
+	},
+	"filtro escape": {
+		"prefix": "escape",
+		"body": [
+			"escape"
+		],
+		"description": "Escapes special characters in HTML, such as <>, ', and &, and converts characters into escape sequences. The filter doesn't effect characters within the string that don’t have a corresponding escape sequence.\".\nstring | escape\nhttps://shopify.dev/docs/api/liquid/filters/escape"
+	},
+	"filtro escape_once": {
+		"prefix": "escape_once",
+		"body": [
+			"escape_once"
+		],
+		"description": "Escapes a string without changing characters that have already been escaped.\nstring | escape_once\nhttps://shopify.dev/docs/api/liquid/filters/escape_once"
+	},
+	"filtro external_video_tag": {
+		"prefix": "external_video_tag",
+		"body": [
+			"external_video_tag"
+		],
+		"description": "Generates an HTML <iframe> tag containing the player for a given external video. The input for the external_video_tag filter can be either a media object or external_video_url.\nvariable | external_video_tag\nhttps://shopify.dev/docs/api/liquid/filters/external_video_tag"
+	},
+	"filtro external_video_url": {
+		"prefix": "external_video_url",
+		"body": [
+			"external_video_url: attribute: ${1:string}"
+		],
+		"description": "Returns the URL for a given external video. Use this filter to specify parameters for the external video player generated by the external_video_tag filter.\nmedia | external_video_url: attribute: string\nhttps://shopify.dev/docs/api/liquid/filters/external_video_url"
+	},
+	"filtro file_img_url": {
+		"prefix": "file_img_url",
+		"body": [
+			"file_img_url"
+		],
+		"description": "Returns the CDN URL for an image from the Files page of the Shopify admin.\nstring | file_img_url\nhttps://shopify.dev/docs/api/liquid/filters/file_img_url"
+	},
+	"filtro file_url": {
+		"prefix": "file_url",
+		"body": [
+			"file_url"
+		],
+		"description": "Returns the CDN URL for a file from the Files page of the Shopify admin.\nstring | file_url\nhttps://shopify.dev/docs/api/liquid/filters/file_url"
+	},
+	"filtro find": {
+		"prefix": "find",
+		"body": [
+			"find: ${1:string}, ${2:string}"
+		],
+		"description": "Returns the first item in an array with a specific property value.\narray | find: string, string\nhttps://shopify.dev/docs/api/liquid/filters/find"
+	},
+	"filtro find_index": {
+		"prefix": "find_index",
+		"body": [
+			"find_index: ${1:string}, ${2:string}"
+		],
+		"description": "Returns the index of the first item in an array with a specific property value.\narray | find_index: string, string\nhttps://shopify.dev/docs/api/liquid/filters/find_index"
+	},
+	"filtro first": {
+		"prefix": "first",
+		"body": [
+			"first"
+		],
+		"description": "Returns the first item in an array.\narray | first\nhttps://shopify.dev/docs/api/liquid/filters/first"
+	},
+	"filtro floor": {
+		"prefix": "floor",
+		"body": [
+			"floor"
+		],
+		"description": "Rounds a number down to the nearest integer.\nnumber | floor\nhttps://shopify.dev/docs/api/liquid/filters/floor"
+	},
+	"filtro font_face": {
+		"prefix": "font_face",
+		"body": [
+			"font_face"
+		],
+		"description": "Generates a CSS @font_face declaration to load the provided font.\nfont | font_face\nhttps://shopify.dev/docs/api/liquid/filters/font_face"
+	},
+	"filtro font_modify": {
+		"prefix": "font_modify",
+		"body": [
+			"font_modify: ${1:string}, ${2:string}"
+		],
+		"description": "Modifies a specific property of a given font.\nfont | font_modify: string, string\nhttps://shopify.dev/docs/api/liquid/filters/font_modify"
+	},
+	"filtro font_url": {
+		"prefix": "font_url",
+		"body": [
+			"font_url"
+		],
+		"description": "Returns the CDN URL for the provided font in woff2 format.\nfont | font_url\nhttps://shopify.dev/docs/api/liquid/filters/font_url"
+	},
+	"filtro format_address": {
+		"prefix": "format_address",
+		"body": [
+			"format_address"
+		],
+		"description": "Generates an HTML address display, with each address component ordered according to the address's locale.\naddress | format_address\nhttps://shopify.dev/docs/api/liquid/filters/format_address"
+	},
+	"filtro global_asset_url": {
+		"prefix": "global_asset_url",
+		"body": [
+			"global_asset_url"
+		],
+		"description": "Returns the CDN URL for a global asset.\nstring | global_asset_url\nhttps://shopify.dev/docs/api/liquid/filters/global_asset_url"
+	},
+	"filtro handleize": {
+		"prefix": "handleize",
+		"body": [
+			"handleize"
+		],
+		"description": "Converts a string into a handle.\nstring | handleize\nhttps://shopify.dev/docs/api/liquid/filters/handleize"
+	},
+	"filtro has": {
+		"prefix": "has",
+		"body": [
+			"has: ${1:string}, ${2:string}"
+		],
+		"description": "Tests if any item in an array has a specific property value.\narray | has: string, string\nhttps://shopify.dev/docs/api/liquid/filters/has"
+	},
+	"filtro highlight": {
+		"prefix": "highlight",
+		"body": [
+			"highlight: ${1:string}"
+		],
+		"description": "Wraps all instances of a specific string, within a given string, with an HTML <strong> tag with a class attribute of highlight.\nstring | highlight: string\nhttps://shopify.dev/docs/api/liquid/filters/highlight"
+	},
+	"filtro highlight_active_tag": {
+		"prefix": "highlight_active_tag",
+		"body": [
+			"highlight_active_tag"
+		],
+		"description": "Wraps a given tag within the collection object in an HTML <span> tag, with a class attribute of active, if the tag is currently active. Only applies to collection tags.\nstring | highlight_active_tag\nhttps://shopify.dev/docs/api/liquid/filters/highlight_active_tag"
+	},
+	"filtro hmac_sha1": {
+		"prefix": "hmac_sha1",
+		"body": [
+			"hmac_sha1: ${1:string}"
+		],
+		"description": "Converts a string into an SHA-1 hash using a hash message authentication code (HMAC).\nstring | hmac_sha1: string\nhttps://shopify.dev/docs/api/liquid/filters/hmac_sha1"
+	},
+	"filtro hmac_sha256": {
+		"prefix": "hmac_sha256",
+		"body": [
+			"hmac_sha256: ${1:string}"
+		],
+		"description": "Converts a string into an SHA-256 hash using a hash message authentication code (HMAC).\nstring | hmac_sha256: string\nhttps://shopify.dev/docs/api/liquid/filters/hmac_sha256"
+	},
+	"filtro image_tag": {
+		"prefix": "image_tag",
+		"body": [
+			"image_tag"
+		],
+		"description": "Generates an HTML <img> tag for a given image_url.\nstring | image_tag\nhttps://shopify.dev/docs/api/liquid/filters/image_tag"
+	},
+	"filtro image_url": {
+		"prefix": "image_url",
+		"body": [
+			"image_url: width: ${1:number}, height: ${2:number}"
+		],
+		"description": "Returns the CDN URL for an image.\nvariable | image_url: width: number, height: number\nhttps://shopify.dev/docs/api/liquid/filters/image_url"
+	},
+	"filtro inline_asset_content": {
+		"prefix": "inline_asset_content",
+		"body": [
+			"inline_asset_content"
+		],
+		"description": "Outputs the content of an asset inline in the template. The asset must be either a SVG, JS, or CSS file.\nasset_name | inline_asset_content\nhttps://shopify.dev/docs/api/liquid/filters/inline_asset_content"
+	},
+	"filtro item_count_for_variant": {
+		"prefix": "item_count_for_variant",
+		"body": [
+			"item_count_for_variant: ${1:{variant_id\\}}"
+		],
+		"description": "Returns the total item count for a specified variant in the cart object.\ncart | item_count_for_variant: {variant_id}\nhttps://shopify.dev/docs/api/liquid/filters/item_count_for_variant"
+	},
+	"filtro join": {
+		"prefix": "join",
+		"body": [
+			"join"
+		],
+		"description": "Combines all of the items in an array into a single string, separated by a space.\narray | join\nhttps://shopify.dev/docs/api/liquid/filters/join"
+	},
+	"filtro json": {
+		"prefix": "json",
+		"body": [
+			"json"
+		],
+		"description": "Converts a string, or object, into JSON format.\nvariable | json\nhttps://shopify.dev/docs/api/liquid/filters/json"
+	},
+	"filtro last": {
+		"prefix": "last",
+		"body": [
+			"last"
+		],
+		"description": "Returns the last item in an array.\narray | last\nhttps://shopify.dev/docs/api/liquid/filters/last"
+	},
+	"filtro line_items_for": {
+		"prefix": "line_items_for",
+		"body": [
+			"line_items_for: ${1:object}"
+		],
+		"description": "Returns the subset of cart line items that include a specified product or variant.\ncart | line_items_for: object\nhttps://shopify.dev/docs/api/liquid/filters/line_items_for"
+	},
+	"filtro link_to": {
+		"prefix": "link_to",
+		"body": [
+			"link_to: ${1:string}"
+		],
+		"description": "Generates an HTML <a> tag.\nstring | link_to: string\nhttps://shopify.dev/docs/api/liquid/filters/link_to"
+	},
+	"filtro link_to_add_tag": {
+		"prefix": "link_to_add_tag",
+		"body": [
+			"link_to_add_tag"
+		],
+		"description": "Generates an HTML <a> tag with an href attribute linking to the current blog or collection, filtered to show only articles or products that have a given tag, as well as any currently active tags.\nstring | link_to_add_tag\nhttps://shopify.dev/docs/api/liquid/filters/link_to_add_tag"
+	},
+	"filtro link_to_remove_tag": {
+		"prefix": "link_to_remove_tag",
+		"body": [
+			"link_to_remove_tag"
+		],
+		"description": "Generates an HTML <a> tag with an href attribute linking to the current blog or collection, filtered to show only articles or products that have any currently active tags, except the provided tag.\nstring | link_to_remove_tag\nhttps://shopify.dev/docs/api/liquid/filters/link_to_remove_tag"
+	},
+	"filtro link_to_tag": {
+		"prefix": "link_to_tag",
+		"body": [
+			"link_to_tag"
+		],
+		"description": "Generates an HTML <a> tag with an href attribute linking to the current blog or collection, filtered to show only articles or products that have a given tag.\nstring | link_to_tag\nhttps://shopify.dev/docs/api/liquid/filters/link_to_tag"
+	},
+	"filtro link_to_type": {
+		"prefix": "link_to_type",
+		"body": [
+			"link_to_type"
+		],
+		"description": "Generates an HTML <a> tag with an href attribute linking to a collection page that lists all products of the given product type.\nstring | link_to_type\nhttps://shopify.dev/docs/api/liquid/filters/link_to_type"
+	},
+	"filtro link_to_vendor": {
+		"prefix": "link_to_vendor",
+		"body": [
+			"link_to_vendor"
+		],
+		"description": "Generates an HTML <a> tag with an href attribute linking to a collection page that lists all products of a given product vendor.\nstring | link_to_vendor\nhttps://shopify.dev/docs/api/liquid/filters/link_to_vendor"
+	},
+	"filtro login_button": {
+		"prefix": "login_button",
+		"body": [
+			"login_button"
+		],
+		"description": "Generates an HTML Button that enables a customer to either sign in to the storefront using their Shop account or follow the shop in the Shop App.\nshop | login_button\nhttps://shopify.dev/docs/api/liquid/filters/login_button"
+	},
+	"filtro lstrip": {
+		"prefix": "lstrip",
+		"body": [
+			"lstrip"
+		],
+		"description": "Strips all whitespace from the left of a string.\nstring | lstrip\nhttps://shopify.dev/docs/api/liquid/filters/lstrip"
+	},
+	"filtro map": {
+		"prefix": "map",
+		"body": [
+			"map: ${1:string}"
+		],
+		"description": "Creates an array of values from a specific property of the items in an array.\narray | map: string\nhttps://shopify.dev/docs/api/liquid/filters/map"
+	},
+	"filtro md5": {
+		"prefix": "md5",
+		"body": [
+			"md5"
+		],
+		"description": "Converts a string into an MD5 hash. MD5 is not considered safe anymore. Please use 'blake3' instead for better security and performance.\nstring | md5\nhttps://shopify.dev/docs/api/liquid/filters/md5"
+	},
+	"filtro media_tag": {
+		"prefix": "media_tag",
+		"body": [
+			"media_tag"
+		],
+		"description": "Generates an appropriate HTML tag for a given media object.\nmedia | media_tag\nhttps://shopify.dev/docs/api/liquid/filters/media_tag"
+	},
+	"filtro metafield_tag": {
+		"prefix": "metafield_tag",
+		"body": [
+			"metafield_tag"
+		],
+		"description": "Generates an HTML element to host the data from a metafield object. The type of element that's generated differs depending on the type of metafield.\nmetafield | metafield_tag\nhttps://shopify.dev/docs/api/liquid/filters/metafield_tag"
+	},
+	"filtro metafield_text": {
+		"prefix": "metafield_text",
+		"body": [
+			"metafield_text"
+		],
+		"description": "Generates a text version of the data from a metafield object.\nmetafield | metafield_text\nhttps://shopify.dev/docs/api/liquid/filters/metafield_text"
+	},
+	"filtro minus": {
+		"prefix": "minus",
+		"body": [
+			"minus: ${1:number}"
+		],
+		"description": "Subtracts a given number from another number.\nnumber | minus: number\nhttps://shopify.dev/docs/api/liquid/filters/minus"
+	},
+	"filtro model_viewer_tag": {
+		"prefix": "model_viewer_tag",
+		"body": [
+			"model_viewer_tag"
+		],
+		"description": "Generates a Google model viewer component for a given 3D model.\nmedia | model_viewer_tag\nhttps://shopify.dev/docs/api/liquid/filters/model_viewer_tag"
+	},
+	"filtro modulo": {
+		"prefix": "modulo",
+		"body": [
+			"modulo: ${1:number}"
+		],
+		"description": "Returns the remainder of dividing a number by a given number.\nnumber | modulo: number\nhttps://shopify.dev/docs/api/liquid/filters/modulo"
+	},
+	"filtro money": {
+		"prefix": "money",
+		"body": [
+			"money"
+		],
+		"description": "Formats a given price based on the store's **HTML without currency** setting.\nnumber | money\nhttps://shopify.dev/docs/api/liquid/filters/money"
+	},
+	"filtro money_amount": {
+		"prefix": "money_amount",
+		"body": [
+			"money_amount"
+		],
+		"description": "Formats a given price as a plain decimal string, without currency symbols, thousand separators, or locale formatting.\nnumber | money_amount\nhttps://shopify.dev/docs/api/liquid/filters/money_amount"
+	},
+	"filtro money_with_currency": {
+		"prefix": "money_with_currency",
+		"body": [
+			"money_with_currency"
+		],
+		"description": "Formats a given price based on the store's **HTML with currency** setting.\nnumber | money_with_currency\nhttps://shopify.dev/docs/api/liquid/filters/money_with_currency"
+	},
+	"filtro money_without_currency": {
+		"prefix": "money_without_currency",
+		"body": [
+			"money_without_currency"
+		],
+		"description": "Formats a given price based on the store's **HTML without currency** setting, without the currency symbol.\nnumber | money_without_currency\nhttps://shopify.dev/docs/api/liquid/filters/money_without_currency"
+	},
+	"filtro money_without_trailing_zeros": {
+		"prefix": "money_without_trailing_zeros",
+		"body": [
+			"money_without_trailing_zeros"
+		],
+		"description": "Formats a given price based on the store's **HTML without currency** setting, excluding the decimal separator (either . or ,) and trailing zeros. If the price has a non-zero decimal value, then the output is the same as the money filter.\nnumber | money_without_trailing_zeros\nhttps://shopify.dev/docs/api/liquid/filters/money_without_trailing_zeros"
+	},
+	"filtro newline_to_br": {
+		"prefix": "newline_to_br",
+		"body": [
+			"newline_to_br"
+		],
+		"description": "Converts newlines (\\n) in a string to HTML line breaks (<br>).\nstring | newline_to_br\nhttps://shopify.dev/docs/api/liquid/filters/newline_to_br"
+	},
+	"filtro payment_button": {
+		"prefix": "payment_button",
+		"body": [
+			"payment_button"
+		],
+		"description": "Generates an HTML container to host accelerated checkout buttons for a product. The payment_button filter must be used on the form object within a product form.\nform | payment_button\nhttps://shopify.dev/docs/api/liquid/filters/payment_button"
+	},
+	"filtro payment_terms": {
+		"prefix": "payment_terms",
+		"body": [
+			"payment_terms"
+		],
+		"description": "Generates the HTML for the Shop Pay Installments banner.\nform | payment_terms\nhttps://shopify.dev/docs/api/liquid/filters/payment_terms"
+	},
+	"filtro payment_type_img_url": {
+		"prefix": "payment_type_img_url",
+		"body": [
+			"payment_type_img_url"
+		],
+		"description": "Returns the URL for an SVG image of a given payment type.\nstring | payment_type_img_url\nhttps://shopify.dev/docs/api/liquid/filters/payment_type_img_url"
+	},
+	"filtro payment_type_svg_tag": {
+		"prefix": "payment_type_svg_tag",
+		"body": [
+			"payment_type_svg_tag"
+		],
+		"description": "Generates an HTML <svg> tag for a given payment type.\nstring | payment_type_svg_tag\nhttps://shopify.dev/docs/api/liquid/filters/payment_type_svg_tag"
+	},
+	"filtro placeholder_svg_tag": {
+		"prefix": "placeholder_svg_tag",
+		"body": [
+			"placeholder_svg_tag"
+		],
+		"description": "Generates an HTML <svg> tag for a given placeholder name.\nstring | placeholder_svg_tag\nhttps://shopify.dev/docs/api/liquid/filters/placeholder_svg_tag"
+	},
+	"filtro pluralize": {
+		"prefix": "pluralize",
+		"body": [
+			"pluralize: ${1:string}, ${2:string}"
+		],
+		"description": "Outputs the singular or plural version of a string based on a given number.\nnumber | pluralize: string, string\nhttps://shopify.dev/docs/api/liquid/filters/pluralize"
+	},
+	"filtro plus": {
+		"prefix": "plus",
+		"body": [
+			"plus: ${1:number}"
+		],
+		"description": "Adds two numbers.\nnumber | plus: number\nhttps://shopify.dev/docs/api/liquid/filters/plus"
+	},
+	"filtro preload_tag": {
+		"prefix": "preload_tag",
+		"body": [
+			"preload_tag: as: ${1:string}"
+		],
+		"description": "Generates an HTML <link> tag with a rel attribute of preload to prioritize loading a given Shopify-hosted asset. The asset URL is also added to the Link header with a rel attribute of preload.\nstring | preload_tag: as: string\nhttps://shopify.dev/docs/api/liquid/filters/preload_tag"
+	},
+	"filtro prepend": {
+		"prefix": "prepend",
+		"body": [
+			"prepend: ${1:string}"
+		],
+		"description": "Adds a given string to the beginning of a string.\nstring | prepend: string\nhttps://shopify.dev/docs/api/liquid/filters/prepend"
+	},
+	"filtro reject": {
+		"prefix": "reject",
+		"body": [
+			"reject: ${1:string}, ${2:string}"
+		],
+		"description": "Filters an array to exclude items with a specific property value.\narray | reject: string, string\nhttps://shopify.dev/docs/api/liquid/filters/reject"
+	},
+	"filtro remove": {
+		"prefix": "remove",
+		"body": [
+			"remove: ${1:string}"
+		],
+		"description": "Removes any instance of a substring inside a string.\nstring | remove: string\nhttps://shopify.dev/docs/api/liquid/filters/remove"
+	},
+	"filtro remove_first": {
+		"prefix": "remove_first",
+		"body": [
+			"remove_first: ${1:string}"
+		],
+		"description": "Removes the first instance of a substring inside a string.\nstring | remove_first: string\nhttps://shopify.dev/docs/api/liquid/filters/remove_first"
+	},
+	"filtro remove_last": {
+		"prefix": "remove_last",
+		"body": [
+			"remove_last: ${1:string}"
+		],
+		"description": "Removes the last instance of a substring inside a string.\nstring | remove_last: string\nhttps://shopify.dev/docs/api/liquid/filters/remove_last"
+	},
+	"filtro replace": {
+		"prefix": "replace",
+		"body": [
+			"replace: ${1:string}, ${2:string}"
+		],
+		"description": "Replaces any instance of a substring inside a string with a given string.\nstring | replace: string, string\nhttps://shopify.dev/docs/api/liquid/filters/replace"
+	},
+	"filtro replace_first": {
+		"prefix": "replace_first",
+		"body": [
+			"replace_first: ${1:string}, ${2:string}"
+		],
+		"description": "Replaces the first instance of a substring inside a string with a given string.\nstring | replace_first: string, string\nhttps://shopify.dev/docs/api/liquid/filters/replace_first"
+	},
+	"filtro replace_last": {
+		"prefix": "replace_last",
+		"body": [
+			"replace_last: ${1:string}, ${2:string}"
+		],
+		"description": "Replaces the last instance of a substring inside a string with a given string.\nstring | replace_last: string, string\nhttps://shopify.dev/docs/api/liquid/filters/replace_last"
+	},
+	"filtro reverse": {
+		"prefix": "reverse",
+		"body": [
+			"reverse"
+		],
+		"description": "Reverses the order of the items in an array.\narray | reverse\nhttps://shopify.dev/docs/api/liquid/filters/reverse"
+	},
+	"filtro round": {
+		"prefix": "round",
+		"body": [
+			"round"
+		],
+		"description": "Rounds a number to the nearest integer.\nnumber | round\nhttps://shopify.dev/docs/api/liquid/filters/round"
+	},
+	"filtro rstrip": {
+		"prefix": "rstrip",
+		"body": [
+			"rstrip"
+		],
+		"description": "Strips all whitespace from the right of a string.\nstring | rstrip\nhttps://shopify.dev/docs/api/liquid/filters/rstrip"
+	},
+	"filtro script_tag": {
+		"prefix": "script_tag",
+		"body": [
+			"script_tag"
+		],
+		"description": "Generates an HTML <script> tag for a given resource URL. The tag has a type attribute of text/javascript.\nstring | script_tag\nhttps://shopify.dev/docs/api/liquid/filters/script_tag"
+	},
+	"filtro sha1": {
+		"prefix": "sha1",
+		"body": [
+			"sha1: ${1:string}"
+		],
+		"description": "Converts a string into an SHA-1 hash. SHA-1 is not considered safe anymore. Please use 'blake3' instead for better security and performance.\nstring | sha1: string\nhttps://shopify.dev/docs/api/liquid/filters/sha1"
+	},
+	"filtro sha256": {
+		"prefix": "sha256",
+		"body": [
+			"sha256: ${1:string}"
+		],
+		"description": "Converts a string into an SHA-256 hash. Please use 'blake3' instead for better security and performance.\nstring | sha256: string\nhttps://shopify.dev/docs/api/liquid/filters/sha256"
+	},
+	"filtro shopify_asset_url": {
+		"prefix": "shopify_asset_url",
+		"body": [
+			"shopify_asset_url"
+		],
+		"description": "Returns the CDN URL for a globally accessible Shopify asset.\nstring | shopify_asset_url\nhttps://shopify.dev/docs/api/liquid/filters/shopify_asset_url"
+	},
+	"filtro size": {
+		"prefix": "size",
+		"body": [
+			"size"
+		],
+		"description": "Returns the size of a string or array.\nvariable | size\nhttps://shopify.dev/docs/api/liquid/filters/size"
+	},
+	"filtro slice": {
+		"prefix": "slice",
+		"body": [
+			"slice"
+		],
+		"description": "Returns a substring or series of array items, starting at a given 0-based index.\nstring | slice\nhttps://shopify.dev/docs/api/liquid/filters/slice"
+	},
+	"filtro sort": {
+		"prefix": "sort",
+		"body": [
+			"sort"
+		],
+		"description": "Sorts the items in an array in case-sensitive alphabetical, or numerical, order.\narray | sort\nhttps://shopify.dev/docs/api/liquid/filters/sort"
+	},
+	"filtro sort_by": {
+		"prefix": "sort_by",
+		"body": [
+			"sort_by: ${1:string}"
+		],
+		"description": "Generates a collection URL with the provided sort_by parameter appended. This filter must be applied to the object property collection.url.\nstring | sort_by: string\nhttps://shopify.dev/docs/api/liquid/filters/sort_by"
+	},
+	"filtro sort_natural": {
+		"prefix": "sort_natural",
+		"body": [
+			"sort_natural"
+		],
+		"description": "Sorts the items in an array in case-insensitive alphabetical order.\narray | sort_natural\nhttps://shopify.dev/docs/api/liquid/filters/sort_natural"
+	},
+	"filtro split": {
+		"prefix": "split",
+		"body": [
+			"split: ${1:string}"
+		],
+		"description": "Splits a string into an array of substrings based on a given separator.\nstring | split: string\nhttps://shopify.dev/docs/api/liquid/filters/split"
+	},
+	"filtro standard_event_data": {
+		"prefix": "standard_event_data",
+		"body": [
+			"standard_event_data: ${1:event_type}, context: ${2:string}"
+		],
+		"description": "Generates a JSON payload for standard events.\nvariable | standard_event_data: event_type, context: string\nhttps://shopify.dev/docs/api/liquid/filters/standard_event_data"
+	},
+	"filtro strip": {
+		"prefix": "strip",
+		"body": [
+			"strip"
+		],
+		"description": "Strips all whitespace from the left and right of a string.\nstring | strip\nhttps://shopify.dev/docs/api/liquid/filters/strip"
+	},
+	"filtro strip_html": {
+		"prefix": "strip_html",
+		"body": [
+			"strip_html"
+		],
+		"description": "Strips all HTML tags from a string.\nstring | strip_html\nhttps://shopify.dev/docs/api/liquid/filters/strip_html"
+	},
+	"filtro strip_newlines": {
+		"prefix": "strip_newlines",
+		"body": [
+			"strip_newlines"
+		],
+		"description": "Strips all newline characters (line breaks) from a string.\nstring | strip_newlines\nhttps://shopify.dev/docs/api/liquid/filters/strip_newlines"
+	},
+	"filtro structured_data": {
+		"prefix": "structured_data",
+		"body": [
+			"structured_data"
+		],
+		"description": "Converts an object into a schema.org structured data format.\nvariable | structured_data\nhttps://shopify.dev/docs/api/liquid/filters/structured_data"
+	},
+	"filtro stylesheet_tag": {
+		"prefix": "stylesheet_tag",
+		"body": [
+			"stylesheet_tag"
+		],
+		"description": "Generates an HTML <link> tag for a given resource URL. The tag has the following parameters: | Attribute | Value | | --- | --- | | rel | stylesheet | | type | text/css | | media | all |\nstring | stylesheet_tag\nhttps://shopify.dev/docs/api/liquid/filters/stylesheet_tag"
+	},
+	"filtro sum": {
+		"prefix": "sum",
+		"body": [
+			"sum"
+		],
+		"description": "Returns the sum of all elements in an array.\narray | sum\nhttps://shopify.dev/docs/api/liquid/filters/sum"
+	},
+	"filtro time_tag": {
+		"prefix": "time_tag",
+		"body": [
+			"time_tag: ${1:string}"
+		],
+		"description": "Converts a timestamp into an HTML <time> tag.\nstring | time_tag: string\nhttps://shopify.dev/docs/api/liquid/filters/time_tag"
+	},
+	"filtro times": {
+		"prefix": "times",
+		"body": [
+			"times: ${1:number}"
+		],
+		"description": "Multiplies a number by a given number.\nnumber | times: number\nhttps://shopify.dev/docs/api/liquid/filters/times"
+	},
+	"filtro translate": {
+		"prefix": "translate",
+		"body": [
+			"t"
+		],
+		"description": "Returns a string of translated text for a given translation key from a locale file.\nstring | t\nhttps://shopify.dev/docs/api/liquid/filters/translate"
+	},
+	"filtro truncate": {
+		"prefix": "truncate",
+		"body": [
+			"truncate: ${1:number}"
+		],
+		"description": "Truncates a string down to a given number of characters.\nstring | truncate: number\nhttps://shopify.dev/docs/api/liquid/filters/truncate"
+	},
+	"filtro truncatewords": {
+		"prefix": "truncatewords",
+		"body": [
+			"truncatewords: ${1:number}"
+		],
+		"description": "Truncates a string down to a given number of words.\nstring | truncatewords: number\nhttps://shopify.dev/docs/api/liquid/filters/truncatewords"
+	},
+	"filtro uniq": {
+		"prefix": "uniq",
+		"body": [
+			"uniq"
+		],
+		"description": "Removes any duplicate items in an array.\narray | uniq\nhttps://shopify.dev/docs/api/liquid/filters/uniq"
+	},
+	"filtro unit_price_with_measurement": {
+		"prefix": "unit_price_with_measurement",
+		"body": [
+			"unit_price_with_measurement: ${1:unit_price_measurement}"
+		],
+		"description": "Formats a given unit price and measurement based on the store's **HTML without currency** setting.\nnumber | unit_price_with_measurement: unit_price_measurement\nhttps://shopify.dev/docs/api/liquid/filters/unit_price_with_measurement"
+	},
+	"filtro upcase": {
+		"prefix": "upcase",
+		"body": [
+			"upcase"
+		],
+		"description": "Converts a string to all uppercase characters.\nstring | upcase\nhttps://shopify.dev/docs/api/liquid/filters/upcase"
+	},
+	"filtro url_decode": {
+		"prefix": "url_decode",
+		"body": [
+			"url_decode"
+		],
+		"description": "Decodes any percent-encoded characters in a string.\nstring | url_decode\nhttps://shopify.dev/docs/api/liquid/filters/url_decode"
+	},
+	"filtro url_encode": {
+		"prefix": "url_encode",
+		"body": [
+			"url_encode"
+		],
+		"description": "Converts any URL-unsafe characters in a string to the percent-encoded equivalent.\nstring | url_encode\nhttps://shopify.dev/docs/api/liquid/filters/url_encode"
+	},
+	"filtro url_escape": {
+		"prefix": "url_escape",
+		"body": [
+			"url_escape"
+		],
+		"description": "Escapes any URL-unsafe characters in a string.\nstring | url_escape\nhttps://shopify.dev/docs/api/liquid/filters/url_escape"
+	},
+	"filtro url_for_type": {
+		"prefix": "url_for_type",
+		"body": [
+			"url_for_type"
+		],
+		"description": "Generates a URL for a collection page that lists all products of the given product type.\nstring | url_for_type\nhttps://shopify.dev/docs/api/liquid/filters/url_for_type"
+	},
+	"filtro url_for_vendor": {
+		"prefix": "url_for_vendor",
+		"body": [
+			"url_for_vendor"
+		],
+		"description": "Generates a URL for a collection page that lists all products from the given product vendor.\nstring | url_for_vendor\nhttps://shopify.dev/docs/api/liquid/filters/url_for_vendor"
+	},
+	"filtro url_param_escape": {
+		"prefix": "url_param_escape",
+		"body": [
+			"url_param_escape"
+		],
+		"description": "Escapes any characters in a string that are unsafe for URL parameters.\nstring | url_param_escape\nhttps://shopify.dev/docs/api/liquid/filters/url_param_escape"
+	},
+	"filtro video_tag": {
+		"prefix": "video_tag",
+		"body": [
+			"video_tag"
+		],
+		"description": "Generates an HTML <video> tag for a given video.\nmedia | video_tag\nhttps://shopify.dev/docs/api/liquid/filters/video_tag"
+	},
+	"filtro weight_with_unit": {
+		"prefix": "weight_with_unit",
+		"body": [
+			"weight_with_unit"
+		],
+		"description": "Generates a formatted weight for a variant object. The weight unit is set in the general settings in the Shopify admin.\nnumber | weight_with_unit\nhttps://shopify.dev/docs/api/liquid/filters/weight_with_unit"
+	},
+	"filtro where": {
+		"prefix": "where",
+		"body": [
+			"where: ${1:string}, ${2:string}"
+		],
+		"description": "Filters an array to include only items with a specific property value.\narray | where: string, string\nhttps://shopify.dev/docs/api/liquid/filters/where"
+	},
+	"filtro within": {
+		"prefix": "within",
+		"body": [
+			"within: ${1:collection}"
+		],
+		"description": "Generates a product URL within the context of the provided collection.\nstring | within: collection\nhttps://shopify.dev/docs/api/liquid/filters/within"
+	}
+}
