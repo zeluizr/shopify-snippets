@@ -14,6 +14,8 @@ las versiones siguen [SemVer](https://semver.org/lang/es/).
   imagen responsiva, `block.shopify_attributes` y texto traducido.
 - Un snippet por cada uno de los 35 tipos de setting del editor de temas, en Liquid y en JSON.
 - Validación del `{% schema %}` de `sections/*.liquid` y `blocks/*.liquid` contra el esquema oficial, con los errores
-  en español y en el lugar exacto. Se apaga con `shopifySnippets.validarSchema`.
+  en español y en el lugar exacto; ante un valor fuera de las opciones, sugiere la más cercana. Se apaga con
+  `shopifySnippets.validarSchema`.
 - Validación de `config/settings_schema.json` y `locales/*.json` con los esquemas oficiales.
 - Ícono de la extensión (el delimitador de Liquid sobre verde) y color del banner del Marketplace.
+- Imagen del README con la extensión en uso, generada desde los snippets y el validador reales.

@@ -104,7 +104,8 @@
 		"check": "node scripts/gerar.js && git diff --exit-code -- snippets/ && node --test",
 		"sincronizar": "node scripts/sincronizar.js",
 		"empacotar": "npx --yes @vscode/vsce package",
-		"icone": "node scripts/gerar-icone.js"
+		"icone": "node scripts/gerar-icone.js",
+		"preview": "node scripts/gerar-preview.js"
 	},
 	"dependencies": {
 		"ajv": "^8.20.0",
