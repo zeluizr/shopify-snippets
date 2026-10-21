@@ -1,12 +1,12 @@
 {
 	"name": "shopify-snippets",
-	"displayName": "Shopify Snippets by commente.me",
+	"displayName": "Shopify Snippets",
 	"description": "Snippets de Liquid y validación del {% schema %} para temas de Shopify, generados desde la documentación oficial.",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"publisher": "commenteme",
 	"icon": "images/icon.png",
 	"galleryBanner": {
-		"color": "#0A5C44",
+		"color": "#005278",
 		"theme": "dark"
 	},
 	"license": "MIT",
