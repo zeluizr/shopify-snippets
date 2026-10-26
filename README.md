@@ -6,6 +6,8 @@ Extensión de VS Code para quien construye temas de Shopify (Online Store 2.0 y 
 Liquid como snippets, la estructura de sections y bloques con su `{% schema %}`, un snippet por cada tipo de setting
 del editor de temas, y la validación del `{% schema %}` contra el esquema oficial de Shopify mientras escribes.
 
+[![marketplace](https://badgen.net/vs-marketplace/v/commenteme.shopify-snippets?label=marketplace&color=005278)](https://marketplace.visualstudio.com/items?itemName=commenteme.shopify-snippets)
+[![instalaciones](https://badgen.net/vs-marketplace/i/commenteme.shopify-snippets?label=instalaciones)](https://marketplace.visualstudio.com/items?itemName=commenteme.shopify-snippets)
 [![licencia](https://badgen.net/github/license/zeluizr/shopify-snippets?label=licencia)](./LICENSE)
 
 ![Snippets de settings y validación del {% schema %} en una section de Horizon](images/preview.png)
@@ -81,35 +83,76 @@ el enlace a shopify.dev.
   valor no está entre las opciones, sugiere la más cercana: `"colour"` → *¿Quisiste decir "color"?*
 - **`config/settings_schema.json` y `locales/*.json`**: con el validador de JSON del propio VS Code.
 
-Para apagar la validación del `{% schema %}`:
+## Configuración
 
-```json
-"shopifySnippets.validarSchema": false
-```
+| Ajuste | Por defecto | Qué hace |
+| :--- | :--- | :--- |
+| `shopifySnippets.validarSchema` | `true` | Valida el `{% schema %}` de `sections/*.liquid` y `blocks/*.liquid` |
+
+No tiene comandos.
 
 ## Junto con otras extensiones
 
-Esta extensión no colorea la sintaxis de Liquid: registra el lenguaje `liquid` para los snippets y la validación, y
-convive con cualquier extensión que traiga la gramática, como la oficial de Shopify.
+No colorea la sintaxis de Liquid: registra el lenguaje `liquid` para los snippets y la validación, y convive con
+cualquier extensión que traiga la gramática, como la oficial de Shopify.
+
+## Solución de problemas
+
+**El Liquid aparece sin colores.** Esta extensión no trae la gramática: instala una que la traiga, como la oficial de
+Shopify.
+
+**No aparece ningún error en el `{% schema %}`.** Solo se validan los archivos de `sections/` y `blocks/`, y solo con
+`shopifySnippets.validarSchema` encendido.
+
+**`Ctrl + Espacio` no abre las sugerencias (macOS).** macOS usa ese atajo para cambiar la fuente de entrada. Usa
+`Cmd + I`, o libéralo en **Ajustes del Sistema → Teclado → Atajos de teclado → Fuentes de entrada**.
+
+## Estructura
+
+```
+.
+├── extension.js                  # activate()/deactivate(), snippets y validación
+├── language-configuration.json   # comentarios y pares del lenguaje liquid
+├── lib/                          # lógica pura, sin la API vscode (testeable con node:test)
+├── data/                         # tags, filtros y objetos de Shopify, y el commit de origen (fonte.json)
+├── schemas/                      # esquema oficial del {% schema %}
+├── snippets/                     # .code-snippets (generado desde data/)
+├── images/                       # ícono (PNG y SVG) e imagen del README
+├── scripts/                      # sincronizar los datos, generar snippets, ícono, imagen y hooks
+└── test/                         # node:test
+```
 
 ## Desarrollo
 
+JavaScript puro, sin TypeScript y sin build: el `main` es `extension.js`, tipado con JSDoc y `// @ts-check`. CommonJS,
+tabs, con punto y coma y con comillas dobles. Dependencias de runtime: `ajv` y `jsonc-parser`.
+
 ```bash
+git clone https://github.com/zeluizr/shopify-snippets.git
+cd shopify-snippets
 npm install
-npm run check          # regenera los snippets, falla si cambiaron, y corre los tests
-SHOPIFY_TEMA=/ruta/del/tema node --test   # agrega el test contra un tema real
-```
 
-Para actualizar los datos oficiales:
-
-```bash
+npm run check                     # regenera los snippets, falla si cambiaron, y corre los tests
 node scripts/sincronizar.js <commit>   # baja datos y esquemas de Shopify/theme-liquid-docs
-node scripts/gerar.js                  # regenera los snippets
-node --test
+npm run gerar                     # regenera snippets/ desde data/
+npm run icone                     # regenera images/icon.png desde images/icon.svg
+npm run preview                   # regenera images/preview.png
+npm run empacotar                 # genera el .vsix
 ```
 
-Ramas: el trabajo sale de `dev` y llega por pull request; `dev → qa → main` por merge de la rama entera, y el commit
-de `main` lleva tag anotado de versión. `./scripts/instalar-hooks.sh` activa los hooks que cobran lo mismo en local.
+`F5` en VS Code abre una ventana de desarrollo con la extensión cargada. Con `SHOPIFY_TEMA=/ruta/del/tema node --test`
+los tests validan también todas las sections y bloques de un tema real.
+
+**Lo generado nunca se edita a mano.** Los snippets salen de `data/` con `scripts/gerar.js`, y `npm run check` falla
+si lo commiteado no es exactamente lo que produce.
+
+**Ramas y publicación.** El trabajo sale de `dev` y llega por pull request; `dev → qa → main` por merge de la rama
+entera, y el commit de `main` lleva tag anotada de versión. `./scripts/instalar-hooks.sh` activa los hooks que
+cobran lo mismo en local. Una tag `v*` en `main` empaqueta el `.vsix` y lo adjunta a la Release de GitHub. La
+publicación en el Marketplace es manual, desde `main`, con `npx @vscode/vsce publish`: sube la versión en
+`package.json` y cierra el `CHANGELOG.md` antes, porque el Marketplace rechaza una versión repetida.
+
+Conventional Commits; el mensaje describe el efecto, no el cambio.
 
 ## Licencia
 
