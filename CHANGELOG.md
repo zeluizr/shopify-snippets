@@ -5,6 +5,18 @@ las versiones siguen [SemVer](https://semver.org/lang/es/).
 
 ## [Sin publicar]
 
+## [0.1.3] - 2026-10-26
+
+### Cambiado
+
+- El ícono tiene las esquinas redondeadas, con el radio del ladrillo, porque el Marketplace no las redondea.
+- La cabecera del Marketplace va en el color de la plataforma, con texto oscuro, y el badge de versión del README
+  también.
+- Nuevo ícono de producto para devs del kit de marca v7: el ladrillo de commente.me con el destaque en el verde de
+  Shopify y el glifo `</>` de snippets.
+- El README sigue el mismo formato que el de VTEX IO Snippets y el de Adobe Commerce Snippets, con los badges de
+  versión, instalaciones y licencia.
+
 ## [0.1.2] - 2026-10-21
 
 ### Cambiado

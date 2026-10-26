@@ -36,9 +36,9 @@ Não traz gramática de Liquid: registra o lenguaje `liquid` e convive com a ext
 
 ## Marca
 
-Segue o kit de marca da commente.me (skill `marca-commente`): o ícone é o **ladrillo**
-(`images/ladrillo-commente.svg`, cópia do kit sem metadados), nenhum produto tem ícone ou cor própria, o banner do
-Marketplace é `--azul` (`#005278`), o nome não leva "by commente.me" e o README assina "Hecho con amor y café por
+Segue o kit de marca da commente.me (skill `marca-commente`): o ícone é o **ladrillo de produto para devs**
+(`images/icon.svg`, cópia de `icon-snippets-shopify.svg` do kit v7 sem metadados): destaque em verde Shopify `#95BF47` e glifo `</>` no quarto bloco; o banner do
+Marketplace é a cor da plataforma (`#95BF47`, verde Shopify) com texto escuro (`theme: light`), e o ícone tem o raio do ladrillo (`rx="22"`), o nome não leva "by commente.me" e o README assina "Hecho con amor y café por
 commente.me", sem citar ferramenta de IA.
 
 ## Comandos
@@ -48,7 +48,7 @@ npm install
 npm run check                          # gera, confere o diff de snippets/ e roda os testes (é o gate)
 node scripts/sincronizar.js <commit>   # atualiza data/ e schemas/ de Shopify/theme-liquid-docs
 npm run empacotar                      # gera o .vsix
-npm run icone                          # images/icon.png a partir do ladrillo (sharp)
+npm run icone                          # images/icon.png a partir de images/icon.svg (sharp)
 npm run preview                        # images/preview.png, a partir dos snippets e do validador reais
 ```
 

@@ -27,3 +27,4 @@ node_modules/**/.eslintrc*
 node_modules/ajv/lib/**
 node_modules/jsonc-parser/lib/esm/**
 images/preview.png
+images/icon.svg
