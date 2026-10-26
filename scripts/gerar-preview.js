@@ -283,7 +283,7 @@ function painel() {
 	s += `<circle cx="${EDX + 50}" cy="${PANEL_Y + 72}" r="6" fill="${COR.erro}"/>`;
 	s += ui(EDX + 47.3, PANEL_Y + 75.8, "×", "#FFFFFF", 10);
 	s += ui(EDX + 64, PANEL_Y + 76, PROBLEMA.mensagem, COR.texto, 12.5);
-	s += ui(W - 24, PANEL_Y + 76, `Snippets for Shopify  [Ln ${LINHA_ERRO}, Col ${colunaDoErro + 1}]`, COR.textoFraco, 12, " text-anchor=\"end\"");
+	s += ui(W - 24, PANEL_Y + 76, `Shopify Snippets  [Ln ${LINHA_ERRO}, Col ${colunaDoErro + 1}]`, COR.textoFraco, 12, " text-anchor=\"end\"");
 	return s;
 }
 
@@ -293,7 +293,7 @@ function barraDeStatus() {
 	s += ui(14, H - 7, "dev", COR.textoFraco, 11.5);
 	s += `<circle cx="52" cy="${H - 11}" r="5" fill="none" stroke="${COR.erro}" stroke-width="1.2"/>`;
 	s += ui(62, H - 7, "1", COR.textoFraco, 11.5);
-	s += ui(W - 14, H - 7, "Liquid    Snippets for Shopify", COR.textoFraco, 11.5, " text-anchor=\"end\"");
+	s += ui(W - 14, H - 7, "Liquid    Shopify Snippets", COR.textoFraco, 11.5, " text-anchor=\"end\"");
 	return s;
 }
 

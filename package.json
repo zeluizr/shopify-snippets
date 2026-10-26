@@ -1,6 +1,6 @@
 {
 	"name": "shopify-snippets",
-	"displayName": "Snippets for Shopify",
+	"displayName": "Shopify Snippets",
 	"description": "Snippets de Liquid y validación del {% schema %} para temas de Shopify, generados desde la documentación oficial.",
 	"version": "0.1.2",
 	"publisher": "commenteme",
@@ -88,7 +88,7 @@
 			}
 		],
 		"configuration": {
-			"title": "Snippets for Shopify",
+			"title": "Shopify Snippets",
 			"properties": {
 				"shopifySnippets.validarSchema": {
 					"type": "boolean",
