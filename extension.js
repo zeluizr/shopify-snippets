@@ -34,7 +34,7 @@ function activate(contexto) {
 				const intervalo = new vscode.Range(documento.positionAt(p.inicio), documento.positionAt(p.fim));
 				const severidade = p.severidade === "aviso" ? vscode.DiagnosticSeverity.Warning : vscode.DiagnosticSeverity.Error;
 				const diagnostico = new vscode.Diagnostic(intervalo, p.mensagem, severidade);
-				diagnostico.source = "Shopify Snippets";
+				diagnostico.source = "Snippets for Shopify";
 				return diagnostico;
 			})
 		);
