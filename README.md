@@ -1,4 +1,4 @@
-# Snippets for Shopify
+# Shopify Snippets
 
 **Snippets de Liquid y validación del `{% schema %}` para temas de Shopify, generados desde la documentación oficial.**
 
@@ -30,7 +30,7 @@ Todo lo que sugiere sale de los datos oficiales de Shopify
 
 ## Instalación
 
-Desde el VS Code Marketplace: busca **«Snippets for Shopify»**, o desde Quick Open (`Cmd/Ctrl + P`):
+Desde el VS Code Marketplace: busca **«Shopify Snippets»**, o desde Quick Open (`Cmd/Ctrl + P`):
 
 ```
 ext install commenteme.shopify-snippets
