@@ -16,7 +16,7 @@ function resolver(corpo) {
 	let anterior;
 	do {
 		anterior = texto;
-		texto = texto.replace(/\$\{\d+:([^${}]*)\}/g, "$1");
+		texto = texto.replace(/\$\{\d+:([^$}]*)\}/g, "$1");
 	} while (texto !== anterior);
 	texto = texto.replace(/\$\{\d+\}/g, "").replace(/\$\d+/g, "");
 	return texto.split("\u0001").join("\\").split("\u0002").join("$").split("\u0003").join("}");
