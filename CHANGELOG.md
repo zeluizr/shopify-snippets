@@ -5,6 +5,13 @@ las versiones siguen [SemVer](https://semver.org/lang/es/).
 
 ## [Sin publicar]
 
+## [0.1.4] - 2026-10-26
+
+### Cambiado
+
+- El nombre visible pasa a ser «Snippets for Shopify», el mismo patrón que Snippets for VTEX IO. El identificador no
+  cambia: quien ya la tiene instalada no pierde nada.
+
 ## [0.1.3] - 2026-10-26
 
 ### Cambiado
