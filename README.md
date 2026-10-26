@@ -12,7 +12,7 @@ del editor de temas, y la validación del `{% schema %}` contra el esquema ofici
 
 ![Snippets de settings y validación del {% schema %} en una section de Horizon](images/preview.png)
 
-Versión del código: **0.2.0**, según [package.json](package.json). Requiere **VS Code >= 1.60.0**.
+Versión del código: **0.2.1**, según [package.json](package.json). Requiere **VS Code >= 1.60.0**.
 
 ---
 
