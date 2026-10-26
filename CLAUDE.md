@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Guia para trabalhar neste repositório. É a extensão de VS Code **"Snippets for Shopify"** (publisher
+Guia para trabalhar neste repositório. É a extensão de VS Code **"Shopify Snippets"** (publisher
 `commenteme`, id `commenteme.shopify-snippets`). Irmã do `zeluizr/vtex-io-snippets`, para temas de Shopify.
 
 ## O que a extensão faz
