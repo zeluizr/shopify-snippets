@@ -57,7 +57,7 @@ test("snippets escritos à mão têm campos bem formados e link", () => {
 test("o arquivo gerado dos manuais está em dia", () => {
 	const gravado = JSON.parse(fs.readFileSync(path.join(RAIZ, "snippets/shopify.code-snippets"), "utf8"));
 	assert.deepEqual(Object.keys(gravado), Object.keys(MANUAIS), "rode node scripts/gerar.js");
-	for (const [nome, { arquivo, ...s }] of Object.entries(MANUAIS)) assert.deepEqual(gravado[nome], s, nome);
+	for (const [nome, { arquivo, fragmento, ...s }] of Object.entries(MANUAIS)) assert.deepEqual(gravado[nome], s, nome);
 });
 
 test("a fonte oficial está fixada num commit", () => {

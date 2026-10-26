@@ -5,6 +5,24 @@ las versiones siguen [SemVer](https://semver.org/lang/es/).
 
 ## [Sin publicar]
 
+## [0.2.0] - 2026-10-26
+
+### Agregado
+
+- La validación del `{% schema %}` revisa reglas de Shopify que el esquema oficial no expresa: `id` de setting
+  repetido en la section o en un bloque, y tipo o nombre de bloque repetido, como errores; `default` de `range` fuera
+  del intervalo o fuera de un paso, `range` con más de 101 pasos, `default` de `select` o `radio` que no es ninguna
+  opción y preset que usa un setting que no existe, como advertencias.
+- Snippets `snippet-file` (snippet con `{% doc %}`, `@param` y `@example`), `preset-blocks` (preset con bloques por
+  id, bloque estático y `block_order`, como en Horizon) y `visible-if` (setting condicional).
+
+### Cambiado
+
+- El error de tipo dice en español qué se esperaba y qué hay: *Se esperaba un texto, pero hay un número.* en lugar
+  de *Se esperaba string.*
+- Cuando falta una propiedad en un setting o un bloque, se subraya su `"type"` (o la primera propiedad) en lugar del
+  objeto entero; en la raíz del schema, ya no se subraya el archivo completo.
+
 ## [0.1.4] - 2026-10-26
 
 ### Cambiado
