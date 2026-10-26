@@ -6,7 +6,7 @@ Extensión de VS Code para quien construye temas de Shopify (Online Store 2.0 y 
 Liquid como snippets, la estructura de sections y bloques con su `{% schema %}`, un snippet por cada tipo de setting
 del editor de temas, y la validación del `{% schema %}` contra el esquema oficial de Shopify mientras escribes.
 
-[![marketplace](https://badgen.net/vs-marketplace/v/commenteme.shopify-snippets?label=marketplace&color=005278)](https://marketplace.visualstudio.com/items?itemName=commenteme.shopify-snippets)
+[![marketplace](https://badgen.net/vs-marketplace/v/commenteme.shopify-snippets?label=marketplace&color=95BF47)](https://marketplace.visualstudio.com/items?itemName=commenteme.shopify-snippets)
 [![instalaciones](https://badgen.net/vs-marketplace/i/commenteme.shopify-snippets?label=instalaciones)](https://marketplace.visualstudio.com/items?itemName=commenteme.shopify-snippets)
 [![licencia](https://badgen.net/github/license/zeluizr/shopify-snippets?label=licencia)](./LICENSE)
 
