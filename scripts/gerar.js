@@ -26,11 +26,11 @@ function gravar(arquivo, snippets) {
 	console.log(`${arquivo}: ${Object.keys(snippets).length} snippets`);
 }
 
-/** Tira o campo interno `arquivo`, que só os testes usam. */
+/** Tira os campos internos `arquivo` e `fragmento`, que só os testes usam. */
 function semInternos() {
 	/** @type {Record<string, unknown>} */
 	const saida = {};
-	for (const [nome, { arquivo, ...snippet }] of Object.entries(MANUAIS)) saida[nome] = snippet;
+	for (const [nome, { arquivo, fragmento, ...snippet }] of Object.entries(MANUAIS)) saida[nome] = snippet;
 	return saida;
 }
 

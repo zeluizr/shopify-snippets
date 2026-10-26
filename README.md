@@ -12,7 +12,7 @@ del editor de temas, y la validación del `{% schema %}` contra el esquema ofici
 
 ![Snippets de settings y validación del {% schema %} en una section de Horizon](images/preview.png)
 
-Versión del código: **0.1.4**, según [package.json](package.json). Requiere **VS Code >= 1.60.0**.
+Versión del código: **0.2.0**, según [package.json](package.json). Requiere **VS Code >= 1.60.0**.
 
 ---
 
@@ -64,7 +64,10 @@ el enlace a shopify.dev.
 | `block-file` | Bloque del tema: `{% doc %}`, `block.shopify_attributes` y `{% schema %}` con preset |
 | `schema-section` | Solo el `{% schema %}` de una section |
 | `schema-block` | Solo el `{% schema %}` de un bloque |
+| `snippet-file` | Snippet con `{% doc %}`: descripción, `@param` y `@example` con `render` |
 | `preset` | Una entrada de `presets` |
+| `preset-blocks` | Preset con bloques por id, un bloque estático y `block_order`, como en Horizon |
+| `visible-if` | `"visible_if"`: el setting aparece en el editor solo si se cumple la condición |
 | `blocks-theme` | `"blocks": [{ "type": "@theme" }, { "type": "@app" }]` |
 | `image-responsive` | Imagen con `srcset`, `sizes` y `loading: 'lazy'` |
 | `shopify-attributes` | `{{ block.shopify_attributes }}` |
@@ -81,6 +84,10 @@ el enlace a shopify.dev.
 - **`{% schema %}` de `sections/*.liquid` y `blocks/*.liquid`**: los errores aparecen subrayados en el lugar exacto,
   en español (propiedad que falta, propiedad que sobra, tipo de setting inexistente, JSON mal formado). Cuando un
   valor no está entre las opciones, sugiere la más cercana: `"colour"` → *¿Quisiste decir "color"?*
+- **Reglas de Shopify que el esquema oficial no expresa**: `id` de setting repetido y tipo o nombre de bloque
+  repetido (errores, porque Shopify rechaza el archivo); `default` de `range` fuera del intervalo o fuera de un paso,
+  `range` con más de 101 pasos, `default` de `select` o `radio` que no es ninguna opción y preset que usa un setting
+  inexistente (advertencias).
 - **`config/settings_schema.json` y `locales/*.json`**: con el validador de JSON del propio VS Code.
 
 ## Configuración
