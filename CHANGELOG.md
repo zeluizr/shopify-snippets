@@ -5,6 +5,8 @@ las versiones siguen [SemVer](https://semver.org/lang/es/).
 
 ## [Sin publicar]
 
+## [0.2.0] - 2026-10-26
+
 ### Agregado
 
 - La validación del `{% schema %}` revisa reglas de Shopify que el esquema oficial no expresa: `id` de setting
