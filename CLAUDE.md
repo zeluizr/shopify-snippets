@@ -38,7 +38,7 @@ Não traz gramática de Liquid: registra o lenguaje `liquid` e convive com a ext
 
 Segue o kit de marca da commente.me (skill `marca-commente`): o ícone é o **ladrillo de produto para devs**
 (`images/icon.svg`, cópia de `icon-snippets-shopify.svg` do kit v7 sem metadados): destaque em verde Shopify `#95BF47` e glifo `</>` no quarto bloco; o banner do
-Marketplace é `--azul` (`#005278`), o nome não leva "by commente.me" e o README assina "Hecho con amor y café por
+Marketplace é a cor da plataforma (`#95BF47`, verde Shopify) com texto escuro (`theme: light`), e o ícone tem o raio do ladrillo (`rx="22"`), o nome não leva "by commente.me" e o README assina "Hecho con amor y café por
 commente.me", sem citar ferramenta de IA.
 
 ## Comandos

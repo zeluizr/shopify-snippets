@@ -6,8 +6,8 @@
 	"publisher": "commenteme",
 	"icon": "images/icon.png",
 	"galleryBanner": {
-		"color": "#005278",
-		"theme": "dark"
+		"color": "#95BF47",
+		"theme": "light"
 	},
 	"license": "MIT",
 	"repository": {
